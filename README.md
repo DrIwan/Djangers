@@ -17,6 +17,9 @@ https://github.com/DrIwan/Djangers.git
 
     git clone https://github.com/DrIwan/Djangers.git
 
+
+## Backend
+
 Рекомендуется создать виртуальное окружение и работать через него:
 
     python -m venv venv
@@ -42,3 +45,13 @@ https://github.com/DrIwan/Djangers.git
 Запуск приложения:
 
     python manage.py runserver
+
+
+## Frontend
+
+    cd frontend
+    npm install
+
+Запуск
+
+    npm run serve
