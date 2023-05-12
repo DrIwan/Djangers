@@ -33,7 +33,7 @@ https://github.com/DrIwan/Djangers.git
 
     cp project/settings.py.example project/settings.py
 
-В settings.py заполнить SECRET_KEY указать данные для подключения базы данных
+В settings.py заполнить SECRET_KEY и указать данные для подключения базы данных
 
 Применить миграции базы данных:
 
