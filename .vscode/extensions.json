@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "github.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "batisteo.vscode-django",
+        "ms-python.python",
+        "editorconfig.editorconfig"
+    ]
+}
