@@ -6,5 +6,8 @@ __pycache__
 media
 static
 
-# Backup files # 
-*.bak 
+# Backup files #
+*.bak
+
+project/settings.py
+venv
