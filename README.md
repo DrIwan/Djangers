@@ -23,3 +23,11 @@ Russian Language Pack for Visual Studio Code https://marketplace.visualstudio.co
 Открываем систему управления версиями -> клонировать репозиторий, в строку вводим:
 https://github.com/DrIwan/Djangers.git
 
+Также надо будет установить python через консоль (лучше прям в VSCode) и для окружения:
+https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+
+Также для работы нужен будет Postgres SQL:
+В нем создаем локальную базу, настрйки прописываем в settings.py (DATABASES)
+
+Запуск приложения:
+python manage.py runserver 
