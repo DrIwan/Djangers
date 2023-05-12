@@ -16,14 +16,14 @@ DEBUG = True
 # Для отключения достаточно зацементить:
 ALLOWED_HOSTS = [
     '127.0.0.1', #Для дебага
-    '172.31.140.229',
+    # '172.31.140.229',
 ]
 
 # Установлен мод для дебага, инфо: https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
 # Для отключения достаточно зацементить:
 INTERNAL_IPS = [
     '127.0.0.1',
-    '172.31.140.229',
+    # '172.31.140.229',
 ]
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'db_tests',
         'USER':'postgres',
-        'PASSWORD':'Musorka_1',
+        'PASSWORD':'',
         'HOST':'127.0.0.1',
         'PORT':'5432'
     }
