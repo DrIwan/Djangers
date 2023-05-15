@@ -28,6 +28,9 @@ https://github.com/DrIwan/Djangers.git
 
     venv\Scripts\Activate.ps1
 
+Установить необходимые пакеты:
+    pip install -r requirements.txt
+
 Для удобной отладки приложения установить:
 
     pip install django-debug-toolbar

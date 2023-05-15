@@ -48,7 +48,7 @@ MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware", #Мод для дебага
 ]
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tests',
-        'USER':'postgres',
-        'PASSWORD':'',
+        'USER':'tests',
+        'PASSWORD':'tests',
         'HOST':'127.0.0.1',
         'PORT':'5432'
     }
