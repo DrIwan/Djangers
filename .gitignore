@@ -9,5 +9,5 @@ static
 # Backup files #
 *.bak
 
-project/settings.py
+backend/settings.py
 venv
