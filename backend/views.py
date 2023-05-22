@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
+from tests.models import Test
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import UserSerializer, GroupSerializer
-
+from .serializers import UserSerializer, GroupSerializer, TestSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -19,4 +19,12 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+class TestViewSet(viewsets.ModelViewSet):
+    """
+    Конечная точка API, которая позволяет просматривать или редактировать тесты.
+    """
+    queryset = Test.objects.all()
+    serializer_class = TestSerializer
     permission_classes = [permissions.IsAuthenticated]
