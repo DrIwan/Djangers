@@ -4,7 +4,6 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from .serializers import UserSerializer, GroupSerializer, TestSerializer
 
-
 class UserViewSet(viewsets.ModelViewSet):
     """
     Конечная точка API, которая позволяет пользователям просматривать или редактировать.

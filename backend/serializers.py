@@ -21,7 +21,6 @@ class TestSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'Name', 'Sort', 'Description_before', 'Description_after', 'Comment', 'Write_time', 'Limit_time', 'Mix_Question']
 
 
-
 # Capital.objects.first().__dict__{
 #     '_state': <django.db.models.base.ModelState object at 0x00000126F2DB0BB0>,
 #     'id': 1,
