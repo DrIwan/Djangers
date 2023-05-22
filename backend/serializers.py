@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User, Group
+from tests.models import Test
 from rest_framework import serializers
 
 
@@ -12,6 +13,13 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
+
+
+class TestSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Test
+        fields = ['url', 'Name', 'Sort', 'Description_before', 'Description_after', 'Comment', 'Write_time', 'Limit_time', 'Mix_Question']
+
 
 
 # Capital.objects.first().__dict__{

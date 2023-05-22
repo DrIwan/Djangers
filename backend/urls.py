@@ -6,6 +6,8 @@ from . import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'tests', views.TestViewSet)
+
 
 # Подключите наш API, используя автоматическую маршрутизацию URL.
 # Кроме того, мы включаем URL-адреса для входа в доступный для просмотра API.
