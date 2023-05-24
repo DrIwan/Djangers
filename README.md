@@ -37,7 +37,7 @@ https://github.com/DrIwan/Djangers.git
 
 Создаем файл настроек на основе шаблона:
 
-    cp project/settings.py.example project/settings.py
+    cp backend/settings.py.example backend/settings.py
 
 В settings.py заполнить SECRET_KEY и указать данные для подключения базы данных
 
