@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
@@ -37,8 +37,110 @@ export default {
     msg: String
   }
 }
-</script>
+</script> -->
+<template>
+    <div class="hello">
+      <h1 class="title">TODO APP</h1>
 
+      <hr>
+
+      <div class="columns">
+        <div class="column is-one-third is-offset-one-third">
+          <form>
+            <h2 class="subtitle">Add the task</h2>
+
+            <div class="field">
+              <label class="label">Add Description</label>
+              <div class="control">
+                <input class="input" type="text">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Select Status</label>
+              <div class="control">
+                <div class="select">
+                  <select>
+                    <option value="worktodo">Work To do</option>
+                    <option value="workdone">Work Done</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="columns">
+        <div class="column is-half">
+          <h2 class="subtitle">Task Todo</h2>
+
+         <div class="todo">
+        <div class="card" v-for="task in tasks" v-if="task.status == 'todo'">
+          <div class="card-content">
+            <div class="content">
+              {{ task.work_description }}
+            </div>
+          </div>
+
+          <footer class="card-footer">
+            <a class="card-footer-item">Work Done</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="column is-half">
+      <h2 class="subtitle">Work Done</h2>
+
+      <div class="done">
+        <div class="card" v-for="task in tasks" v-if="task.status == 'done'">
+          <div class="card-content">
+            <div class="content">
+              {{ task.work_description }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </template>
+
+  <script>
+  import axios from 'axios'
+  export default {
+    name: 'HelloWorld',
+    data () {
+      return {
+        tasks: []
+      }
+    },
+    mounted () {
+      this.get_Tasks();
+    },
+    methods: {
+      get_Tasks() {
+          axios({
+              method:'get',
+              url: 'http://127.0.0.1:8000/tasks/',
+              auth: {
+                  username: 'your username',
+                  password: 'your password'
+              }
+          }).then(response => this.tasks = response.data);
+      }
+    }
+  }
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
