@@ -11,6 +11,3 @@ static
 
 backend/settings.py
 venv
-
-# Frontend files #
-frontend/
