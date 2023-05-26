@@ -2,6 +2,8 @@
     <navbar>
         <router-link to="/">Go to Home</router-link>
         <router-link to="/profile">Go to Profile</router-link>
+        <router-link to="/tests">Go to Tests</router-link>
+
     </navbar>
     <div class="app">
       <router-view></router-view>

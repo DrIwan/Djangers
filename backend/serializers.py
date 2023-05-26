@@ -18,7 +18,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class TestSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Test
-        fields = ['url', 'Name', 'Sort', 'Description_before', 'Description_after', 'Comment', 'Write_time', 'Limit_time', 'Mix_Question']
+        fields = ['url', 'id', 'Name', 'Sort', 'Description_before', 'Description_after', 'Comment', 'Write_time', 'Limit_time', 'Mix_Question']
 
 
 # Capital.objects.first().__dict__{
@@ -26,6 +26,7 @@ class TestSerializer(serializers.HyperlinkedModelSerializer):
 #     'id': 1,
 #     'country': 'Norway',
 #     'capital_city': 'Oslo',
-#     'capital_population': 693500, 
+#     'capital_population': 693500,
 #     'author_id': 1
 # }
+# можно так, если fields = "__all__"
