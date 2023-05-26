@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+body{
+    @apply mx-32 h-screen box-border overflow-hidden bg-[url('./img/background.jpg')] bg-cover bg-center;
+}
+/* Главная страница*/
+.header{
+    @apply flex items-center justify-between mt-10;
+}
+.group-btn ul{
+    @apply flex flex-row items-center justify-between;
+}
+.group-btn ul li{
+    @apply ml-8 text-dark-blue font-monst font-normal text-2xl  last:rounded last:border-2 last:p-1;
+}
+.logo{
+    @apply font-bold text-5xl font-monst text-dark-blue leading-10;
+}
+.content{
+    @apply flex flex-row items-center justify-between;
+}
+.text-block{
+    @apply text-dark-blue w-[40%] font-monst flex flex-col items-start justify-start;
+}
+.text-block h2{
+    @apply font-bold text-9xl text-start;
+}
+.text {
+    @apply font-normal text-xl text-start mt-8;
+}
+.start-btn{
+    @apply rounded-2xl bg-dark-blue w-1/2 p-4 text-white text-2xl mt-12 hover:bg-light-blue;
+}
+.group-btn ul li:hover{
+    @apply text-light-blue;
+}
+.img-company{
+    @apply w-[60%] bg-[url('./img/people.png')] h-[85vh] bg-contain bg-no-repeat bg-center;
+}
+
+.ellipse-white{
+    @apply bg-white w-[180vh] h-[180vh] rounded-full absolute z-0 left-28 -top-56;
+}
+.ellipse{
+    @apply bg-[url('./img/background.jpg')] bg-cover bg-center absolute rounded-full z-10 w-[140vh] h-[140vh] left-64 -top-20;
+}
+.main-content{
+    @apply z-20 absolute left-[104px];
+}
+.main-block{
+    @apply relative;
+}
+
+/* Авторизация */
+.form-reg-log{
+
+    @apply bg-white/20 border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white rounded-2xl flex flex-row items-center justify-between w-full h-[90vh];
+}
+.login-box,.reg-box{
+    @apply w-1/2 flex flex-col items-center justify-center font-monst;
+}
+.cont{
+    @apply w-full h-[100vh] flex flex-row items-center justify-center;
+}
+.login-box h2,.reg-box h2{
+    @apply font-bold text-5xl text-wh-d mb-10 mix-blend-screen;
+}
+.login-box button,.reg-box button{
+    @apply bg-dark-blue-2 rounded-full border-none p-3 text-white w-[28%] text-2xl font-monst uppercase;
+}
+.text-box{
+    @apply relative w-[60%] mb-7;
+}
+.reg-box  .text-box{
+    @apply mb-3;
+}
+.text-box input{
+    @apply w-full py-2 text-dark-blue-3 mb-7 border-b-2 border-b-white bg-trans outline-none;
+}
+.text-box label{
+    @apply absolute top-0 left-0 py-2 text-xl text-dark-blue-3 pointer-events-none duration-[0.5s];
+}
+.open-reg{
+    @apply mt-7;
+}
+/*.text-box input:focus ~ label,.text-box input:valid ~ label{
+    @apply top-[-20px] left-0 text-sm-blue text-xs;
+}*/
+.line{
+    @apply w-[0.2vw] bg-white h-5/6 rounded;
+}
