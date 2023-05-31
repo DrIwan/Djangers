@@ -60,7 +60,7 @@ body{
     @apply bg-white/20 border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white rounded-2xl flex flex-row items-center justify-between w-full h-[90vh];
 }
 .login-box,.reg-box{
-    @apply w-1/2 flex flex-col items-center justify-center font-monst;
+    @apply w-11/12 flex flex-col items-center justify-center font-monst;
 }
 .cont{
     @apply w-full h-[100vh] flex flex-row items-center justify-center;
@@ -68,7 +68,7 @@ body{
 .login-box h2,.reg-box h2{
     @apply font-bold text-5xl text-wh-d mb-10 mix-blend-screen;
 }
-.login-box button,.reg-box button{
+.login-box buttonRg,.reg-box buttonRg{
     @apply bg-dark-blue-2 rounded-full border-none p-3 text-white w-[28%] text-2xl font-monst uppercase;
 }
 .text-box{
