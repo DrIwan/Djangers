@@ -15,11 +15,23 @@ module.exports = {
         'dark-blue-3':'#0c223d',
         'trans':'transparent',
         'sm-blue':'#154e95',
+        'light':'#E7F7FE',
+        'reflection':'#F4DACB',
+        'shadow':'#c3b3d9fc',
+
     },
     fontFamily: {
         'monst':['Montserrat', 'sans-serif'],
     },
     extend: {
+        keyframes: {
+            swim: {
+                '50%': { transform: 'translateY(-2.5rem) translateX(-1.5rem)' },
+            }
+        },
+        animation: {
+            'swim-sp': 'swim 8s ease-in infinite',
+        }
 
     },
   },
