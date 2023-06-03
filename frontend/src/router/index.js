@@ -4,6 +4,7 @@ import HomePage from "@/components/pages/HomePage"
 import ProfilePage from "@/components/pages/ProfilePage"
 import RegistrationPage from "@/components/pages/RegistrationPage"
 import LoginPage from "@/components/pages/loginPage"
+import mainPage from "@/components/pages/mainPage"
 
 const routes = [
     {
@@ -21,6 +22,10 @@ const routes = [
     {
         path: '/login',
         component: LoginPage
+    },
+    {
+        path: '/main',
+        component: mainPage
     },
 
 ]

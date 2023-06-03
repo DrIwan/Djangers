@@ -1,5 +1,4 @@
 <template>
-    <left-menu-bar></left-menu-bar>
     <div class="Profile">
         <div class="form-reg-log">
             <form class="login-box">
@@ -13,7 +12,7 @@
                     <input type="text" name="">
                     <label>Пароль</label>
                 </div>
-                <ButtonRg>Войти</ButtonRg>
+                <ButtonRg @click="$router.push('/main')">Войти</ButtonRg>
                 <div class="open-reg"><router-link to="/registration">Перейти к регистрации</router-link></div>
             </form>
 
