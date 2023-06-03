@@ -1,6 +1,6 @@
 <template>
     <div class="main-content">
-        <LeftMenuBar>
+        <LeftMenuBar class="">
 
         </LeftMenuBar>
 
