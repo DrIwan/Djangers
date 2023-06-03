@@ -12,6 +12,3 @@
         name: 'buttonRg'
     }
 </script>
-
-<style lang="scss" scoped>
-</style>

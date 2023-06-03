@@ -2,4 +2,3 @@
     <leftMenuBar></leftMenuBar>
     <headerPg></headerPg>
 </template>
-
