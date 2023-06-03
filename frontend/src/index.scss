@@ -90,9 +90,12 @@ body{
 }
 
 .reg-box{
-    @apply hidden;
-    .text-box{
+
+    .text-box, .combo-box{
         @apply mb-3;
+    }
+    buttonRg{
+        @apply min-w-[180px];
     }
 }
 .text-box{
@@ -107,4 +110,26 @@ body{
     input:focus ~ label,input:not(:placeholder-shown) ~label{
         @apply top-[-20px] left-0 text-sm-blue text-xs;
     }
+}
+.combo-box{
+    @apply relative w-[60%] mb-7;
+    select{
+        @apply border-b-2 border-t-0 border-l-0 border-r-0 border-white bg-trans w-full py-2 outline-none mb-7;
+        option{
+            option:hover{
+                background:rgba(201, 175, 238);
+            }
+        }
+    }
+    label{
+        @apply absolute top-0 left-0 py-2 text-xl text-dark-blue-3 pointer-events-none duration-[0.5s];
+    }
+    select:focus ~ label, select:not(:placeholder-shown) ~label{
+        @apply top-[-20px] left-0 text-sm-blue text-xs;
+    }
+
+}
+leftmenubar{
+    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0;
+    background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
 }
