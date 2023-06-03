@@ -39,7 +39,7 @@
                     <label>Пароль</label>
                 </div>
                 <ButtonRg @click="this.$router.push('/main')">Войти</ButtonRg>
-                <div class="open-reg"><router-link to="/registration">Перейти к регистрации</router-link></div>
+                <div class="open-reg"><router-link to="/profile">Перейти к регистрации</router-link></div>
             </form>
 
         </div>

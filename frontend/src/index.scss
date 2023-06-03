@@ -82,7 +82,7 @@ body{
         @apply font-bold text-5xl text-wh-d mb-10 mix-blend-screen;
     }
     buttonRg{
-        @apply bg-dark-blue-2 rounded-full border-none p-3 text-white w-[28%] text-2xl font-monst uppercase;
+        @apply bg-dark-blue-2 rounded-full border-none p-3 text-white w-[28%] text-2xl font-monst uppercase cursor-pointer;
     }
 }
 .cont{
