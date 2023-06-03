@@ -1,13 +1,7 @@
 <template>
-    <div class="main-content">
-        <LeftMenuBar class="">
-
-        </LeftMenuBar>
-
-    </div>
-
-
+        <leftMenuBar></leftMenuBar>
+        <headerPg></headerPg>
 </template>
 
-<style lang="scss" scoped>
+<style >
 </style>
