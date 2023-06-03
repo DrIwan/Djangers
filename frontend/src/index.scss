@@ -48,7 +48,7 @@ body{
     @apply bg-[url('./img/background.jpg')] bg-cover bg-center absolute rounded-full z-10 w-[140vh] h-[140vh] left-64 -top-20;
 }
 .main-content{
-    @apply z-20 absolute left-[104px];
+    @apply z-20 absolute;
 }
 .main-block{
     @apply relative;
@@ -69,7 +69,7 @@ body{
     @apply font-bold text-5xl text-wh-d mb-10 mix-blend-screen;
 }
 .login-box buttonRg,.reg-box buttonRg{
-    @apply bg-dark-blue-2 rounded-full border-none p-3 text-white w-[28%] text-2xl font-monst uppercase;
+    @apply bg-dark-blue-2 rounded-full border-none p-3 text-white w-[28%] text-2xl font-monst uppercase cursor-pointer;
 }
 .text-box{
     @apply relative w-[60%] mb-7;
@@ -91,4 +91,8 @@ body{
 }*/
 .line{
     @apply w-[0.2vw] bg-white h-5/6 rounded;
+}
+
+leftMenuBar{
+    @apply flex bg-dark-blue w-full h-screen overflow-hidden top-0 left-0 absolute;
 }

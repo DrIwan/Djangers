@@ -1,24 +1,20 @@
 <template>
-    <aside>
-
+    <aside class="leftBar">
+        SideBar
     </aside>
 </template>
+
 
 <script>
 export default{
         name: 'leftMenuBar',
     }
-
 </script>
 
-<style>
+<style scoped>
     aside{
-        position: fixed;
-        min-height: 100vh;
-        width: 20%;
-        background-color: red;
-        margin: 0;
-        padding: 0;
-     margin-left: -8rem;
+        display: flex;
+        flex-direction: column;
+        background-color: darkblue;
     }
 </style>
