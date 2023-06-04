@@ -1,26 +1,23 @@
 <template>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0" />
     <aside class="leftBar">
+        <h2>ТЕСТ+</h2>
         <menuBarItem title="Главная"
-        icon=""
+        icon="home"
         @click="this.$router.push('/main')"
-        style="cursor:pointer;"
         ></menuBarItem>
         <menuBarItem title="Тесты"
-        icon=""
+        icon="library_books"
         @click="this.$router.push('/tests')"
-        style="cursor:pointer;"
         ></menuBarItem>
         <menuBarItem title="Попытки"
-        icon=""
+        icon="data_thresholding"
         @click="this.$router.push('/attempts')"
-        style="cursor:pointer;"
         ></menuBarItem>
         <!-- Необходима проверка на админа для этой кнопочки-->
         <menuBarItem title="Работники"
-        icon=""
+        icon="person"
         @click="this.$router.push('/workers')"
-        style="cursor:pointer;"
         ></menuBarItem>
     </aside>
 </template>
@@ -32,12 +29,3 @@ export default{
     }
 </script>
 
-<style scoped>
-    aside{
-        color: aliceblue;
-        display: flex;
-        width:30%;
-        flex-direction: column;
-        background-color: rgb(51, 255, 0);
-    }
-</style>

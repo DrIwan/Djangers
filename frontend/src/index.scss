@@ -129,7 +129,91 @@ body{
     }
 
 }
-leftmenubar{
-    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0;
+.leftBar{
+    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 ;
     background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
+
+    h2{
+        @apply font-monst font-black text-5xl;
+    }
+    .leftmenu-btn{
+        @apply flex flex-row justify-center items-center mt-8;
+        .item{
+            @apply cursor-pointer text-dark-blue font-monst ml-4 text-xl;
+        }
+        .lm-icon-btn{
+            @apply bg-white w-16 h-16 rounded-xl flex flex-row justify-center items-center text-dark-blue shadow-xl;
+            span{
+                @apply text-5xl;
+            }
+        }
+        &:hover{
+            @apply scale-110;
+            .item,.lm-icon-btn{
+                @apply text-sm-blue;
+            }
+            .lm-icon-btn{
+                @apply bg-hover-btn-rect;
+            }
+
+
+        }
+
+    }
+    .active-lm-btn{
+        .item,.lm-icon-btn{
+            @apply text-active-btn-t
+        }
+        .lm-icon-btn{
+            @apply bg-active-btn-rect;
+        }
+    }
 }
+
+.container{
+    @apply absolute w-[72%] left-[20rem];
+    .header-mainpg{
+        @apply ml-[100px] flex flex-row justify-between mt-9 items-center;
+        .navbar{
+            @apply flex flex-row font-monst text-2xl;
+            .nav-item{
+                @apply ml-6;
+            }
+        }
+        .lk-btn{
+
+            .main-lk-btn{
+                 @apply flex flex-row items-end;
+                .lk-ico{
+                    @apply w-14 h-16 rounded-xl bg-dark-blue-3;
+                }
+                .dropdown-toggle{
+                    @apply w-8 h-9 bg-white flex flex-row justify-center items-center rounded-lg ml-[6px] mb-1;
+                    span{
+                        @apply text-3xl;
+                    }
+                    &:hover{
+                        @apply scale-110;
+                        span{
+                            @apply scale-110 text-sm-blue;
+                        }
+                    }
+                }
+            }
+            .dropdown-menu{
+                @apply flex flex-col items-start bg-white rounded-xl absolute translate-x-[-6rem] translate-y-1 w-48 p-1 pb-4;
+                li{
+                    @apply pt-2 w-full text-left font-monst text-lg pl-3;
+                }
+            }
+            .hidden-dm{
+                @apply hidden;
+            }
+        }
+
+    }
+
+}
+
+
+

@@ -18,7 +18,9 @@ module.exports = {
         'light':'#E7F7FE',
         'reflection':'#F4DACB',
         'shadow':'#c3b3d9fc',
-
+        'active-btn-t': '#4572AA',
+        'active-btn-rect':'#CCDAEE',
+        'hover-btn-rect':'#EBF2FC',
     },
     fontFamily: {
         'monst':['Montserrat', 'sans-serif'],
