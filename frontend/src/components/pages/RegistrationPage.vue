@@ -46,8 +46,10 @@
                 <div class="combo-box">
 
                     <select required placeholder=" ">
+
                             <option value="man">Мужской</option>
                             <option value="woman">Женский</option>
+
                     </select>
                     <label>Пол</label>
                 </div>
@@ -67,4 +69,6 @@
 <script>
 
 </script>
+<style>
 
+</style>

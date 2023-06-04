@@ -1,6 +1,8 @@
 <template>
      <leftMenuBar></leftMenuBar>
-     <headerPg></headerPg>
+     <div class="container">
+            <headerPg></headerPg>
+        </div>
 </template>
 
 <script>
