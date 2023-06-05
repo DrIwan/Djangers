@@ -1,7 +1,8 @@
 <template>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0" />
-    <aside class="leftBar">
-        <h2>ТЕСТ+</h2>
+    <aside class="leftBar hidden-leftBar" v-on:mouseleave="hideLM">
+        <h2 class="logo-lb" v-on:click="hideLM">ТЕСТ+</h2>
+        <button class="double-logo" v-on:click="openLM">T+</button>
         <menuBarItem title="Главная"
         icon="home"
         @click="this.$router.push('/main')"
@@ -24,8 +25,21 @@
 
 
 <script>
+ import $ from "jquery";
 export default{
         name: 'leftMenuBar',
+        methods:{
+            openLM(){
+                $('.leftBar').removeClass('hidden-leftBar');
+                $('.container').removeClass('big-container');
+            },
+            hideLM(){
+
+                    $('.leftBar').addClass('hidden-leftBar');
+                    $('.container').addClass('big-container');
+
+            }
+        }
     }
 </script>
 
