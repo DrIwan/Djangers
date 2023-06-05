@@ -21,6 +21,7 @@ module.exports = {
         'active-btn-t': '#4572AA',
         'active-btn-rect':'#CCDAEE',
         'hover-btn-rect':'#EBF2FC',
+        'hover-btn-dm':'#F6F8FB',
     },
     fontFamily: {
         'monst':['Montserrat', 'sans-serif'],
@@ -29,10 +30,25 @@ module.exports = {
         keyframes: {
             swim: {
                 '50%': { transform: 'translateY(-2.5rem) translateX(-1.5rem)' },
-            }
+            },
+            boun:{
+                '50%': { transform: 'translateY(-0.5rem)' },
+
+            },
+            boun_2:{
+                '50%': { transform: 'translateY(0.5rem)' },
+
+            },
+           sp:{
+                '100%':{transform: 'rotate(360deg)' },
+           },
+
         },
         animation: {
             'swim-sp': 'swim 8s ease-in infinite',
+            'boun-cont': 'boun 8s ease-in infinite',
+            'boun-cont-2': 'boun_2 8s ease-in infinite',
+            'csp':'sp 10s ease-in infinite',
         }
 
     },

@@ -1,5 +1,7 @@
 <template>
     <leftMenuBar></leftMenuBar>
-    <headerPg></headerPg>
+    <div class="container big-container">
+        <headerPg></headerPg>
+    </div>
 </template>
 

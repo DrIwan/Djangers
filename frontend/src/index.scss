@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&display=swap');
 
 body{
     @apply mx-32 h-screen box-border overflow-hidden bg-[url('./img/background.jpg')] bg-cover bg-center;
@@ -115,11 +115,6 @@ body{
     @apply relative w-[60%] mb-7;
     select{
         @apply border-b-2 border-t-0 border-l-0 border-r-0 border-white bg-trans w-full py-2 outline-none mb-7;
-        option{
-            option:hover{
-                background:rgba(201, 175, 238);
-            }
-        }
     }
     label{
         @apply absolute top-0 left-0 py-2 text-xl text-dark-blue-3 pointer-events-none duration-[0.5s];
@@ -130,16 +125,19 @@ body{
 
 }
 .leftBar{
-    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 ;
+    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 transition-all ease-linear duration-500;
     background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
 
-    h2{
+    h2,.double-logo{
         @apply font-monst font-black text-5xl;
+    }
+    .double-logo{
+        @apply hidden text-4xl bg-dark-blue-3 text-white w-16 h-16 rounded-xl;
     }
     .leftmenu-btn{
         @apply flex flex-row justify-center items-center mt-8;
         .item{
-            @apply cursor-pointer text-dark-blue font-monst ml-4 text-xl;
+            @apply cursor-pointer text-dark-blue font-monst ml-4 text-xl transition-all ease-linear duration-500;
         }
         .lm-icon-btn{
             @apply bg-white w-16 h-16 rounded-xl flex flex-row justify-center items-center text-dark-blue shadow-xl;
@@ -169,6 +167,21 @@ body{
         }
     }
 }
+.hidden-leftBar{
+    @apply pl-7 pt-[43px] w-32;
+    .leftmenu-btn{
+        .item{
+            @apply hidden;
+        }
+    }
+    .double-logo{
+        @apply flex flex-col justify-center items-center;
+    }
+    h2{
+        @apply hidden;
+    }
+
+}
 
 .container{
     @apply absolute w-[72%] left-[20rem];
@@ -177,7 +190,16 @@ body{
         .navbar{
             @apply flex flex-row font-monst text-2xl;
             .nav-item{
-                @apply ml-6;
+                @apply ml-6 first:ml-0;
+                &:hover{
+                    @apply text-light-blue;
+                }
+            }
+            .active-item{
+                a{
+                    @apply underline underline-offset-8 decoration-2;
+                }
+
             }
         }
         .lk-btn{
@@ -188,7 +210,7 @@ body{
                     @apply w-14 h-16 rounded-xl bg-dark-blue-3;
                 }
                 .dropdown-toggle{
-                    @apply w-8 h-9 bg-white flex flex-row justify-center items-center rounded-lg ml-[6px] mb-1;
+                    @apply w-8 h-9 bg-white flex flex-row justify-center items-center rounded-lg ml-[6px] mb-1 border-none outline-none;
                     span{
                         @apply text-3xl;
                     }
@@ -204,6 +226,12 @@ body{
                 @apply flex flex-col items-start bg-white rounded-xl absolute translate-x-[-6rem] translate-y-1 w-48 p-1 pb-4;
                 li{
                     @apply pt-2 w-full text-left font-monst text-lg pl-3;
+                    &:hover{
+                        @apply bg-hover-btn-dm;
+                        a{
+                            @apply text-sm-blue;
+                        }
+                    }
                 }
             }
             .hidden-dm{
@@ -212,7 +240,39 @@ body{
         }
 
     }
+    .parting-block{
+        @apply w-full ml-[100px] flex mt-16;
+        .text-block{
+            @apply w-[50%];
+            & > *{
+                @apply w-full text-left font-monst;
+            }
+            h2{
+                @apply text-6xl font-extrabold;
+            }
+            .parting-word{
+                @apply text-2xl font-normal mt-5;
+            }
 
+        }
+        .img-block{
+            @apply w-[50%];
+            .parting-img{
+                @apply bg-contain bg-no-repeat bg-center w-full h-full;
+            }
+            .admin{
+                @apply bg-[url('./img/admin.png')];
+            }
+            .user{
+                @apply bg-[url('./img/user.png')];
+            }
+        }
+
+    }
+
+}
+.big-container{
+    @apply left-32 w-[83%] transition-all ease-linear duration-500;
 }
 
 
