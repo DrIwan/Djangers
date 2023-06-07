@@ -3,11 +3,17 @@ import leftMenuBar from "@/components/UI/leftMenuBar"
 import menuBarItem from "@/components/UI/menuBarItem"
 import headerPg from "@/components/UI/headerPg"
 import lkButton from "@/components/UI/lkButton"
+import comboBox from "@/components/UI/combobox"
+import textBox from "@/components/UI/textBox"
+import numberBox from "@/components/UI/numberBox"
 
 export default[
     buttonRg,
     leftMenuBar,
     menuBarItem,
     headerPg,
-    lkButton
+    lkButton,
+    comboBox,
+    textBox,
+    numberBox,
 ]
