@@ -1,5 +1,4 @@
 <template>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0" />
     <aside class="leftBar hidden-leftBar" v-on:mouseleave="hideLM">
         <h2 class="logo-lb" v-on:click="hideLM">ТЕСТ+</h2>
         <button class="double-logo" v-on:click="openLM">T+</button>
@@ -23,6 +22,9 @@
     </aside>
 </template>
 
+<style scoped>
+    @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
+</style>
 
 <script>
  import $ from "jquery";
