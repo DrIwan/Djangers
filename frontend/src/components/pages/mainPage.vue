@@ -72,6 +72,29 @@
 body{
     @apply h-[120vh] overflow-y-scroll;
 }
+ .parting-block{
+        @apply w-full flex mt-16;
+        .text-block{
+            @apply w-[50%];
+            & > *{
+                @apply w-full text-left font-monst;
+            }
+            h2{
+                @apply text-6xl font-extrabold;
+            }
+            .parting-word{
+                @apply text-2xl font-normal mt-5;
+            }
+
+        }
+        .img-block{
+            @apply w-[50%];
+            .parting-img{
+                @apply bg-contain bg-no-repeat bg-center w-full h-full;
+            }
+        }
+
+    }
 
 .glass-block{
     @apply border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white shadow-lg w-full h-full rounded-xl font-monst text-left p-5 text-dark-blue;
@@ -102,7 +125,7 @@ body{
 
 }
 .express-menu{
-    @apply h-full mt-12 flex flex-row justify-between items-center ml-[100px];
+    @apply h-full mt-12 flex flex-row justify-between items-center ;
 }
 .task-menu{
     @apply w-[49%] ;

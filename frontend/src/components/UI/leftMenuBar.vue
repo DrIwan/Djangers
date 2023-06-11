@@ -66,7 +66,9 @@ export default{
     .double-logo{
         @apply hidden text-4xl bg-dark-blue-3 text-white w-16 h-16 rounded-xl;
     }
-
+    .item{
+        @apply delay-1000;
+    }
 }
 //скрытая
 .hidden-leftBar{

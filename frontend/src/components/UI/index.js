@@ -7,6 +7,8 @@ import comboBox from "@/components/UI/combobox"
 import textBox from "@/components/UI/textBox"
 import numberBox from "@/components/UI/numberBox"
 import buttonTest from "@/components/UI/buttonTest"
+import previewTest from "@/components/UI/previewTest"
+import scrollBox from "@/components/UI/scrollBox"
 
 export default[
     buttonRg,
@@ -18,4 +20,6 @@ export default[
     textBox,
     numberBox,
     buttonTest,
+    previewTest,
+    scrollBox,
 ]

@@ -89,38 +89,26 @@ body{
 /*МЕНЮ ПОЛЬЗОВАТЕЛЯ*/
 
 .container{
-    @apply absolute w-[72%] left-[20rem];
-    .parting-block{
-        @apply w-full ml-[100px] flex mt-16;
-        .text-block{
-            @apply w-[50%];
-            & > *{
-                @apply w-full text-left font-monst;
-            }
-            h2{
-                @apply text-6xl font-extrabold;
-            }
-            .parting-word{
-                @apply text-2xl font-normal mt-5;
-            }
-
-        }
-        .img-block{
-            @apply w-[50%];
-            .parting-img{
-                @apply bg-contain bg-no-repeat bg-center w-full h-full;
-            }
-            .admin{
-                @apply bg-[url('./img/admin.png')];
-            }
-            .user{
-                @apply bg-[url('./img/user.png')];
-            }
-        }
-
+    @apply absolute w-[72%] left-[20rem] pl-[100px];
+    .admin{
+        @apply bg-[url('./img/admin.png')];
     }
-
+    .user{
+        @apply bg-[url('./img/user.png')];
+    }
 }
 .big-container{
     @apply left-32 w-[83%] transition-all ease-linear duration-500;
+}
+.close{
+    @apply bg-[url('./img/close.png')];
+}
+.open{
+    @apply bg-[url('./img/open.png')];
+}
+.success{
+    @apply bg-[url('./img/success.png')];
+}
+.fail{
+    @apply bg-[url('./img/fail.png')];
 }

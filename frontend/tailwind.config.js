@@ -26,6 +26,7 @@ module.exports = {
         'success-text':'#8EB377',
         'fail-color':'#EF9AD4',
         'close-color':'#9FAFC6',
+        'pas-tabs':'#83A8D7',
     },
     fontFamily: {
         'monst':['Montserrat', 'sans-serif'],
