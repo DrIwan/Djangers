@@ -1,10 +1,12 @@
 <template>
     <div class="combo-box" v-on:click="openMenu">
-                    <select required placeholder=" " class="s-main hidden">
+                    <select
+                        required placeholder=" "
+                        :class="isOpen? 's-main' : 's-main hidden'">
                             <option value="man">Мужской</option>
                             <option value="woman">Женский</option>
                     </select>
-                    <div  class="select-b">
+                    <div class="select-b">
                         Мужской
                     </div>
                     <ul class="custom-select hidden">
@@ -22,10 +24,17 @@
 <script>
     export default{
         name: 'comboBox',
+        data(){
+            return{
+               isOpen: false,
+            }
+        },
         methods:{
             onClickmenu(){
+
             },
             openMenu(){
+
             }
         },
         props: ['title']
