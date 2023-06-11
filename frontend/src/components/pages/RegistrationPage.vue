@@ -34,7 +34,7 @@
                 <textBox title="Пароль"></textBox>
                 <comboBox title="Пол"></comboBox>
                 <numberBox title="Возраст"></numberBox>
-                <ButtonRg>Отправить</ButtonRg>
+                <buttonRg>Отправить</buttonRg>
             </form>
         </div>
         </section>
