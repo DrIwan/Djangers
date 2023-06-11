@@ -5,7 +5,6 @@
             <button
             class="dropdown-toggle"
             v-on:click="handleClick"
-            v-on:mouseleave="hideM"
             ><span class="material-symbols-rounded">expand_more</span></button>
          </div>
 
@@ -14,7 +13,7 @@
         v-on:mouseleave="hideM"
         >
             <li><RouterLink  to="/profile">Личный кабинет</RouterLink></li>
-            <li><RouterLink to="/main">Выход</RouterLink></li>
+            <li><RouterLink to="/">Выход</RouterLink></li>
         </ul>
         <!--<RouterLink to="/settings">Настройки</RouterLink>-->
     </div>

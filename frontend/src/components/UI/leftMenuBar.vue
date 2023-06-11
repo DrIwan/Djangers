@@ -42,9 +42,11 @@ export default{
         methods:{
             openLM(){
                 this.isOpen = true;
+                this.$emit('toggleClass', this.isOpen);
             },
             hideLM(){
                 this.isOpen = false;
+                this.$emit('toggleClass', this.isOpen);
             }
         }
     }

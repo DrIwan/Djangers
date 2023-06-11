@@ -1,7 +1,12 @@
 <template>
-        <leftMenuBar></leftMenuBar>
+        <leftMenuBar
+            @toggleClass="toggleOpen($event)"
 
-        <div class="container big-container">
+        ></leftMenuBar>
+
+        <div
+            :class="LBisOpen? 'container': 'container big-container'"
+        >
             <headerPg></headerPg>
             <div class="parting-block">
                 <div class="text-block">
@@ -26,6 +31,22 @@
         </div>
 
 </template>
+
+<script>
+export default{
+
+    data(){
+        return{
+            LBisOpen: false,
+        }
+    },
+    methods:{
+        toggleOpen(inf){
+            this.LBisOpen = inf;
+        }
+    },
+}
+</script>
 
 <style >
 </style>
