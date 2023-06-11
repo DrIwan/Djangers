@@ -27,6 +27,23 @@
         name: 'headerPg'
     }
 </script>
-<style>
+<style lang="scss" scoped>
+.header-mainpg{
+    @apply ml-[100px] flex flex-row justify-between mt-9 items-center;
+    .navbar{
+        @apply flex flex-row font-monst text-2xl;
+        .nav-item{
+            @apply ml-6 first:ml-0;
+            &:hover{
+                @apply text-light-blue;
+            }
+        }
+        .active-item{
+            a{
+                @apply underline underline-offset-8 decoration-2;
+            }
 
+       }
+    }
+}
 </style>

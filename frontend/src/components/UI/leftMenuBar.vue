@@ -51,20 +51,36 @@ export default{
 
 </script>
 
-<!--
- import $ from "jquery";
-export default{
-        name: 'leftMenuBar',
-        methods:{
-            openLM(){
-                $('.leftBar').removeClass('hidden-leftBar');
-                $('.container').removeClass('big-container');
-            },
-            hideLM(){
+<style lang="scss" scoped>
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
+//активная боковая панель
+.leftBar{
+    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 transition-all ease-linear duration-500;
+    background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
 
-                    $('.leftBar').addClass('hidden-leftBar');
-                    $('.container').addClass('big-container');
+    h2,.double-logo{
+        @apply font-monst font-black text-5xl;
+    }
+    .double-logo{
+        @apply hidden text-4xl bg-dark-blue-3 text-white w-16 h-16 rounded-xl;
+    }
 
-            }
+}
+//скрытая
+.hidden-leftBar{
+    @apply pl-7 pt-[43px] w-32;
+    .leftmenu-btn{
+        .item{
+            @apply hidden;
         }
-} -->
+    }
+    .double-logo{
+        @apply flex flex-col justify-center items-center;
+    }
+    h2{
+        @apply hidden;
+    }
+
+}
+
+</style>
