@@ -31,7 +31,7 @@
                 <h2>Вход</h2>
                 <textBox title="Логин"></textBox>
                 <textBox title="Пароль"></textBox>
-                <ButtonRg @click="this.$router.push('/main')">Войти</ButtonRg>
+                <buttonRg @click="this.$router.push('/main')">Войти</buttonRg>
                 <div class="open-reg"><router-link to="/registration">Перейти к регистрации</router-link></div>
             </form>
 

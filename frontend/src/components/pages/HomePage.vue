@@ -62,6 +62,9 @@
     }
     .start-btn{
         @apply rounded-2xl bg-dark-blue w-1/2 p-4 text-white text-2xl mt-12 hover:bg-light-blue;
+        &:hover{
+            @apply shadow-[inset_0_0_28px_12px_#08295385] border-solid border-[1px] border-[#082954];
+        }
     }
 
     .img-company{
