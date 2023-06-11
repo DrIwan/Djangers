@@ -6,6 +6,7 @@ import lkButton from "@/components/UI/lkButton"
 import comboBox from "@/components/UI/combobox"
 import textBox from "@/components/UI/textBox"
 import numberBox from "@/components/UI/numberBox"
+import buttonTest from "@/components/UI/buttonTest"
 
 export default[
     buttonRg,
@@ -16,4 +17,5 @@ export default[
     comboBox,
     textBox,
     numberBox,
+    buttonTest,
 ]

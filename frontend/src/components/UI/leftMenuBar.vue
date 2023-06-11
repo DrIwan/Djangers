@@ -57,7 +57,7 @@ export default{
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
 //активная боковая панель
 .leftBar{
-    @apply h-screen bg-dark-blue-3 block w-80 absolute top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 transition-all ease-linear duration-500;
+    @apply h-screen bg-dark-blue-3 block w-80 fixed top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 transition-all ease-linear duration-500;
     background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
 
     h2,.double-logo{
