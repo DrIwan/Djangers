@@ -29,7 +29,7 @@
 </script>
 <style lang="scss" scoped>
 .header-mainpg{
-    @apply ml-[100px] flex flex-row justify-between mt-9 items-center;
+    @apply flex flex-row justify-between mt-9 items-center;
     .navbar{
         @apply flex flex-row font-monst text-2xl;
         .nav-item{
