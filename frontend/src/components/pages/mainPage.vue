@@ -1,6 +1,14 @@
 <template>
-        <leftMenuBar></leftMenuBar>
-        <div class="container big-container">
+
+        <leftMenuBar
+            @toggleClass="toggleOpen($event)"
+
+        ></leftMenuBar>
+
+        <div
+            :class="LBisOpen? 'container': 'container big-container'"
+        >
+
             <headerPg></headerPg>
             <div class="parting-block">
                 <div class="text-block">
@@ -59,6 +67,7 @@
 
 </template>
 
+
 <style lang="scss" scoped>
 body{
     @apply h-[120vh] overflow-y-scroll;
@@ -102,3 +111,22 @@ body{
     @apply w-[49%] ;
 }
 </style>
+
+<script>
+export default{
+
+    data(){
+        return{
+            LBisOpen: false,
+        }
+    },
+    methods:{
+        toggleOpen(inf){
+            this.LBisOpen = inf;
+        }
+    },
+}
+</script>
+
+
+
