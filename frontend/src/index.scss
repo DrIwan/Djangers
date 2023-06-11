@@ -172,7 +172,7 @@ body{
             @apply cursor-pointer text-dark-blue font-monst ml-4 text-xl transition-all ease-linear duration-500;
         }
         .lm-icon-btn{
-            @apply bg-white w-16 h-16 rounded-xl flex flex-row justify-center items-center text-dark-blue shadow-xl;
+            @apply bg-white w-16 h-16 rounded-xl flex flex-row justify-center items-center text-dark-blue shadow-xl cursor-pointer;
             span{
                 @apply text-5xl;
             }

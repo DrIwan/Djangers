@@ -29,15 +29,8 @@
             <div class="form-reg-log">
             <form class="login-box">
                 <h2>Вход</h2>
-
-                <div class="text-box">
-                    <input type="text" name="" required placeholder=" " >
-                    <label>Логин</label>
-                </div>
-                <div class="text-box">
-                    <input type="text" name="" required placeholder=" ">
-                    <label>Пароль</label>
-                </div>
+                <textBox title="Логин"></textBox>
+                <textBox title="Пароль"></textBox>
                 <ButtonRg @click="this.$router.push('/main')">Войти</ButtonRg>
                 <div class="open-reg"><router-link to="/registration">Перейти к регистрации</router-link></div>
             </form>

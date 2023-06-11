@@ -1,5 +1,6 @@
 <template>
-    <aside class="leftBar hidden-leftBar" v-on:mouseleave="hideLM">
+    <aside :class="isOpen ? 'leftBar': 'leftBar hidden-leftBar'"
+    on-mouseleave="hideLM">
         <h2 class="logo-lb" v-on:click="hideLM">ТЕСТ+</h2>
         <button class="double-logo" v-on:click="openLM">T+</button>
         <menuBarItem title="Главная"
@@ -27,6 +28,30 @@
 </style>
 
 <script>
+export default{
+        name: 'leftMenuBar',
+        isOpen:{
+            type: Boolean,
+            value: true,
+        },
+        data(){
+            return{
+                isOpen: false
+            }
+        },
+        methods:{
+            openLM(){
+                this.isOpen = true;
+            },
+            hideLM(){
+                this.isOpen = false;
+            }
+        }
+    }
+
+</script>
+
+<!--
  import $ from "jquery";
 export default{
         name: 'leftMenuBar',
@@ -42,6 +67,4 @@ export default{
 
             }
         }
-    }
-</script>
-
+} -->
