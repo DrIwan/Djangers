@@ -22,6 +22,10 @@ module.exports = {
         'active-btn-rect':'#CCDAEE',
         'hover-btn-rect':'#EBF2FC',
         'hover-btn-dm':'#F6F8FB',
+        'success-block':'#B2DB99',
+        'success-text':'#8EB377',
+        'fail-color':'#EF9AD4',
+        'close-color':'#9FAFC6',
     },
     fontFamily: {
         'monst':['Montserrat', 'sans-serif'],

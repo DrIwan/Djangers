@@ -39,3 +39,8 @@
         </section>
     </div>
 </template>
+<style lang="scss" scoped>
+    body{
+        @apply overflow-hidden;
+    }
+</style>

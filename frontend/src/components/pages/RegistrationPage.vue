@@ -45,6 +45,8 @@
 <script>
 
 </script>
-<style>
-
+<style lang="scss" scoped>
+    body{
+        @apply overflow-hidden;
+    }
 </style>
