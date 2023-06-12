@@ -4,6 +4,7 @@
             <headerPg></headerPg>
             <div class="header-test">
                 <h2 class="header-page">Тесты</h2>
+                    <!--проверка статуса-->
                 <div v-if="true" class="express-btn">
                     <span class="material-symbols-rounded">add</span>
                     <span class="material-symbols-rounded">refresh</span>
@@ -17,7 +18,7 @@
                 </div>
             </div>
             <!--проверка статуса-->
-            <div v-if="true" class="glass-block">
+            <glassBlock v-if="true" class="gl" style="height: 70vh!important;">
                 <div class="up-menu">
                     <scrollBox class="mini-menu">
                         <div class="content-menu">
@@ -40,8 +41,8 @@
                 </div>
 
                 <!--пейджер добавить-->
-            </div>
-            <div v-if="false" class="glass-block">
+            </glassBlock>
+            <glassBlock v-if="false" class="gl" style="height: 70vh!important;">
                 <scrollBox>
                     <buttonTest title="Тест" style="margin: 0 !important;"></buttonTest>
                     <buttonTest title="Тест"></buttonTest>
@@ -52,7 +53,7 @@
                     <buttonTest title="Тест"></buttonTest>
                 </scrollBox>
                 <!--пейджер добавить-->
-            </div>
+            </glassBlock>
         </div>
 </template>
 
@@ -71,9 +72,8 @@ export default{
 }
 </script>
 <style lang="scss" scoped>
-.glass-block{
-    @apply border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white shadow-lg w-full h-[65vh] rounded-xl font-monst text-left p-6 text-dark-blue mt-4;
-    background: linear-gradient(303.7deg, rgba(255, 255, 255, 0.69) 0.17%, rgba(255, 255, 255, 0.49) 42.99%, rgba(255, 255, 255, 0.25) 98.03%);
+.gl{
+    @apply mt-4;
     .up-menu{
         @apply h-full flex flex-row;
         .mini-menu{

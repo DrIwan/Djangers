@@ -33,33 +33,37 @@
             </div>
             <div v-if="true" class="express-menu">
                 <div class="task-menu">
-                    <div class="glass-block">
+                    <glassBlock class="gl" style="height: 50vh!important;">
                         <h2>План тестирования</h2>
                         <p>Обязательные тесты</p>
-                        <!--добавить цикл-->
-                        <div class="scroll-box">
-                            <buttonTest title="Тест"></buttonTest>
-                            <buttonTest title="Тест"></buttonTest>
-                            <buttonTest title="Тест"></buttonTest>
-                            <buttonTest title="Тест"></buttonTest>
-                            <buttonTest title="Тест"></buttonTest>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="mark-menu">
-                   <div class="glass-block">
-                        <h2>Попытки</h2>
-                        <p>Пройденные тесты</p>
-                        <div class="scroll-box">
+                        <scrollBox>
                             <!--добавить цикл-->
                             <buttonTest title="Тест"></buttonTest>
                             <buttonTest title="Тест"></buttonTest>
                             <buttonTest title="Тест"></buttonTest>
                             <buttonTest title="Тест"></buttonTest>
                             <buttonTest title="Тест"></buttonTest>
-                        </div>
-                    </div>
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                        </scrollBox>
+                    </glassBlock>
+                </div>
+                <div class="mark-menu">
+                    <glassBlock class="gl" style="height: 50vh!important;">
+                        <h2>Попытки</h2>
+                        <p>Пройденные тесты</p>
+                        <scrollBox>
+                            <!--добавить цикл-->
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                            <buttonTest title="Тест"></buttonTest>
+                        </scrollBox>
+                    </glassBlock>
+
                 </div>
 
             </div>
@@ -96,9 +100,8 @@ body{
 
     }
 
-.glass-block{
-    @apply border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white shadow-lg w-full h-full rounded-xl font-monst text-left p-5 text-dark-blue;
-    background: linear-gradient(303.7deg, rgba(255, 255, 255, 0.69) 0.17%, rgba(255, 255, 255, 0.49) 42.99%, rgba(255, 255, 255, 0.25) 98.03%);
+.gl{
+
     h2{
         @apply text-2xl;
     }
@@ -136,18 +139,20 @@ body{
 </style>
 
 <script>
-export default{
 
-    data(){
-        return{
+
+export default{
+    data() {
+        return {
             LBisOpen: false,
-        }
+        };
     },
-    methods:{
-        toggleOpen(inf){
+    methods: {
+        toggleOpen(inf) {
             this.LBisOpen = inf;
         }
-    },
+    }
+
 }
 </script>
 
