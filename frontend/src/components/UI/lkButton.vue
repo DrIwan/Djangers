@@ -2,7 +2,7 @@
     <div class="lk-btn">
         <div class="main-lk-btn">
               <!--проработать-->
-            <img src="" class="lk-ico">
+            <img :src=picture_src class="lk-ico">
             <button
             class="dropdown-toggle"
             v-on:click="handleClick"
@@ -25,6 +25,9 @@
   export default{
         name: 'lkButton',
         isOpen: false,
+        props:{
+            'picture_src': String,
+        },
         data(){
             return{
                 isOpen: false

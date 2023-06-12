@@ -23,10 +23,6 @@
     </aside>
 </template>
 
-<style scoped>
-    @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
-</style>
-
 <script>
 export default{
         name: 'leftMenuBar',
