@@ -89,12 +89,15 @@ body{
 /*МЕНЮ ПОЛЬЗОВАТЕЛЯ*/
 
 .container{
-    @apply absolute w-[72%] left-[20rem] pl-[100px];
+    @apply absolute w-[72%] left-[20rem] pl-[100px] overflow-y-scroll h-screen;
     .admin{
         @apply bg-[url('./img/admin.png')];
     }
     .user{
         @apply bg-[url('./img/user.png')];
+    }
+    &::-webkit-scrollbar{
+        @apply w-0;
     }
 }
 .big-container{
@@ -111,4 +114,39 @@ body{
 }
 .fail{
     @apply bg-[url('./img/fail.png')];
+}
+
+.line{
+    @apply h-[99%] w-[2px] bg-white rounded ml-2;
+}
+.tabs{
+    @apply text-pas-tabs font-monst text-2xl ml-5 cursor-pointer;
+    li{
+        @apply mt-3;
+        &:hover{
+            @apply text-light-blue scale-105;
+        }
+    }
+    .label-t{
+        @apply text-dark-blue font-bold;
+    }
+    .active{
+        @apply text-dark-blue;
+    }
+}
+.name-page{
+    @apply font-monst font-black text-5xl text-left text-dark-blue mb-5;
+}
+.header-test{
+    @apply mt-5 flex flex-row justify-between items-center;
+    .express-btn{
+        @apply flex flex-row;
+        span{
+            background: linear-gradient(303.7deg, rgba(255, 255, 255, 0.69) 0.17%, rgba(255, 255, 255, 0.49) 42.99%, rgba(255, 255, 255, 0.25) 98.03%);
+            @apply text-dark-blue text-3xl rounded-lg p-1 ml-2 border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white shadow-lg;
+            &:hover{
+                @apply text-sm-blue scale-105;
+            }
+        }
+    }
 }

@@ -29,7 +29,7 @@
 </script>
 <style lang="scss" scoped>
 .ch-block{
-    @apply h-auto mb-5 last:mb-0 flex flex-row justify-start items-center font-monst text-dark-blue;
+    @apply cursor-pointer h-auto mb-5 last:mb-0 flex flex-row justify-start items-center font-monst text-dark-blue;
     .icon-user{
         @apply w-12 h-12 rounded-full object-fill;
     }

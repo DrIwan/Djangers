@@ -33,10 +33,10 @@
             </div>
             <div v-if="true" class="express-menu">
                 <div class="task-menu">
-                    <glassBlock class="gl" style="height: 50vh!important;">
+                    <glassBlock class="gl" style="height: 70vh!important;">
                         <h2>План тестирования</h2>
                         <p>Обязательные тесты</p>
-                        <scrollBox>
+                        <scrollBox class="min-scrl">
                             <!--добавить цикл-->
                             <buttonTest title="Тест"></buttonTest>
                             <buttonTest title="Тест"></buttonTest>
@@ -49,10 +49,10 @@
                     </glassBlock>
                 </div>
                 <div class="mark-menu">
-                    <glassBlock class="gl" style="height: 50vh!important;">
+                    <glassBlock class="gl" style="height: 70vh!important;">
                         <h2>Попытки</h2>
                         <p>Пройденные тесты</p>
-                        <scrollBox>
+                        <scrollBox class="min-scrl">
                             <!--добавить цикл-->
                             <buttonTest title="Тест"></buttonTest>
                             <buttonTest title="Тест"></buttonTest>
@@ -73,8 +73,8 @@
 
 
 <style lang="scss" scoped>
-body{
-    @apply h-[120vh] overflow-y-scroll;
+.min-scrl{
+   height: 80% !important;
 }
  .parting-block{
         @apply w-full flex mt-16;
@@ -128,7 +128,7 @@ body{
 
 }
 .express-menu{
-    @apply h-full mt-12 flex flex-row justify-between items-center ;
+    @apply mt-12 flex flex-row justify-between items-center ;
 }
 .task-menu{
     @apply w-[49%] ;
@@ -139,7 +139,6 @@ body{
 </style>
 
 <script>
-
 
 export default{
     data() {

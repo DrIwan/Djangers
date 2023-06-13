@@ -9,6 +9,9 @@ import profilePage from "@/components/pages/ProfilePage"
 import attemptsPage from "@/components/pages/attemptsPage"
 import testsPage from "@/components/pages/testsPage"
 import workersPage from "@/components/pages/workersPage"
+import scalesPage from "@/components/pages/scalesPage"
+import interpretationsPage from "@/components/pages/interpretationsPage"
+import subtestsPage from "@/components/pages/subtestsPage"
 
 const routes = [
     {
@@ -46,6 +49,18 @@ const routes = [
     {
         path: '/workers',
         component: workersPage
+    },
+    {
+        path: '/scales',
+        component: scalesPage
+    },
+    {
+        path: '/interpretations',
+        component: interpretationsPage
+    },
+    {
+        path: '/subtests',
+        component: subtestsPage
     },
 
 ]
