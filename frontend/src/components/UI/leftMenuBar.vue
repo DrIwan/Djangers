@@ -57,7 +57,7 @@ export default{
     background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
 
     h2,.double-logo{
-        @apply font-monst font-black text-5xl;
+        @apply font-monst font-black text-5xl cursor-pointer;
     }
     .double-logo{
         @apply hidden text-4xl bg-dark-blue-3 text-white w-16 h-16 rounded-xl;

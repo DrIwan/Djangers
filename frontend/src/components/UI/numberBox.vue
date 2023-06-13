@@ -43,7 +43,7 @@
         @apply appearance-none;
     }
     .icon-inp{
-        @apply absolute top-0 right-0 cursor-pointer;
+        @apply absolute top-[-16px] right-0 cursor-pointer h-[25px];
         span{
             @apply text-2xl text-dark-blue-3;
         }

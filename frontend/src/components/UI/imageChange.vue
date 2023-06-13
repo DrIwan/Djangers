@@ -20,7 +20,7 @@ export default{
 <style lang="scss" scoped>
   @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
 .img-ch{
-    @apply flex flex-row justify-center items-center w-[400px] h-[400px];
+    @apply flex flex-row justify-center items-center w-[400px] h-[400px] cursor-pointer;
     & > *{
         @apply absolute;
     }

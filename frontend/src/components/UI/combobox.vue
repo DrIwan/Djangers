@@ -58,7 +58,7 @@
 <style lang="scss" scoped>
   @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
 .combo-box{
-    @apply relative w-[60%] mb-7 flex justify-center items-center;
+    @apply relative w-[60%] mb-7 flex justify-center items-center cursor-pointer;
     .select-b{
         @apply text-left border-b-2 border-t-0 border-l-0 border-r-0 border-white bg-trans w-full py-2 outline-none mb-5 appearance-none cursor-pointer;
     }

@@ -29,7 +29,9 @@
 
   </template>
 
+
 <style lang="scss" scoped>
+
 .header{
     @apply flex items-center justify-between mt-10;
 }
@@ -92,3 +94,4 @@
 
 
 </style>
+

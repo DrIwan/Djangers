@@ -20,7 +20,7 @@
 <style lang="scss" scoped>
 //стили кнопки
 .leftmenu-btn{
-    @apply flex flex-row justify-center items-center mt-8;
+    @apply flex flex-row justify-center items-center mt-8 cursor-pointer;
     .item{
         @apply cursor-pointer text-dark-blue font-monst ml-4 text-xl transition-all ease-linear duration-500 delay-1000;
     }

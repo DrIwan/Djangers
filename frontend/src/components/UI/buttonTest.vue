@@ -13,7 +13,7 @@
 </script>
 <style lang="scss" scoped>
 .block-test{
-    @apply border-[1px] border-white shadow-lg w-full h-20 rounded-xl p-4 flex flex-row justify-between items-center mt-2 font-monst text-dark-blue;
+    @apply cursor-pointer border-[1px] border-white shadow-lg w-full h-20 rounded-xl p-4 flex flex-row justify-between items-center mt-2 font-monst text-dark-blue;
     background: linear-gradient(303.7deg, rgba(255, 255, 255, 0.69) 0.17%, rgba(255, 255, 255, 0.49) 42.99%, rgba(255, 255, 255, 0.25) 98.03%);
     &:hover {
         @apply bg-gradient-to-r from-active-btn-rect/10 to-active-btn-rect/30 border-active-btn-rect -translate-y-1;

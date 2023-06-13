@@ -47,7 +47,7 @@
                 @apply text-left mt-5 font-bold text-xl;
             }
             .start-btn{
-                @apply mt-7 bg-dark-blue text-white p-2 w-[38%] text-2xl text-center rounded-lg;
+                @apply mt-7 bg-dark-blue text-white p-2 w-[38%] text-2xl text-center rounded-lg cursor-pointer;
                 &:hover{
                     @apply shadow-[inset_0_0_28px_12px_#08295385] border-solid border-[1px] border-[#082954];
                 }

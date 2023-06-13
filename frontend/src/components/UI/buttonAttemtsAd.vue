@@ -28,7 +28,7 @@ export default{
 </script>
 <style lang="scss" scoped>
     .ch-block{
-        @apply h-auto mb-5 last:mb-0 flex flex-col font-monst text-dark-blue pl-10 pr-10;
+        @apply h-auto mb-5 last:mb-0 flex flex-col font-monst text-dark-blue pl-10 pr-10 cursor-pointer;
         .label-bl{
             @apply flex flex-row justify-between items-center;
             .name-worker{
