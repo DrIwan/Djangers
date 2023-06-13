@@ -1,6 +1,12 @@
 <template>
     <div class="text-box">
-        <input type="text" name="" required placeholder=" ">
+        <input
+        type="text"
+        name=""
+        required placeholder=" "
+        v-bind:value="value"
+        @input="value = $event.target.value"
+        >
         <label>{{ title }}</label>
     </div>
 </template>
@@ -10,6 +16,11 @@
     export default{
         name: 'textBox',
         props: ['title'],
+        data(){
+            return{
+                value: ''
+            }
+        },
     }
 </script>
 <style lang="scss" scoped>

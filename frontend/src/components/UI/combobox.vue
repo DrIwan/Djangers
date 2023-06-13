@@ -2,16 +2,30 @@
     <div class="combo-box" v-on:click="openMenu">
                     <select
                         required placeholder=" "
-                        :class="isOpen? 's-main' : 's-main hidden'">
-                            <option value="man">Мужской</option>
-                            <option value="woman">Женский</option>
+                        class="s-main hidden"
+                        v-model="item"
+                        >
+                            <option value="man"><div class="line"></div>Мужской</option>
+                            <option value="woman"><div class="line l-2"></div>Женский</option>
                     </select>
                     <div class="select-b">
-                        Мужской
+                        {{item}}
                     </div>
-                    <ul class="custom-select hidden">
-                        <li class="custom-option active-option" rel="man" v-on:click="onClickmenu"><div class="line"></div>Мужской</li>
-                        <li class="custom-option" rel="woman" v-on:click="onClickmenu"><div class="line l-2"></div>Женский</li>
+                    <ul
+                    :class="isOpen? 'custom-select' : 'custom-select hidden'"
+                    >
+                        <li
+                            :class="isActive?'custom-option active-option': 'custom-option'"
+                            rel="man"
+                            v-on:click="onClickmenu"
+                            >
+                            <div class="line"></div>Мужской</li>
+                        <li
+                        :class="isActive?'custom-option': 'custom-option  active-option'"
+                            rel="woman"
+                            v-on:click="onClickmenu"
+                            >
+                            <div class="line l-2"></div>Женский</li>
                     </ul>
 
                     <div class="icon-select"><span class="material-symbols-rounded">expand_more</span></div>
@@ -19,11 +33,14 @@
     </div>
 </template>
 <script>
+
     export default{
         name: 'comboBox',
         data(){
             return{
                isOpen: false,
+               isActive: true,
+               item: "Мужской",
             }
         },
         methods:{
@@ -31,7 +48,7 @@
 
             },
             openMenu(){
-
+                this.isOpen = !this.isOpen
             }
         },
         props: ['title']
