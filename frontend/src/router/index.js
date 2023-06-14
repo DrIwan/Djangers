@@ -12,6 +12,10 @@ import workersPage from "@/components/pages/workersPage"
 import scalesPage from "@/components/pages/scalesPage"
 import interpretationsPage from "@/components/pages/interpretationsPage"
 import subtestsPage from "@/components/pages/subtestsPage"
+import previewPage from "@/components/pages/previewPage"
+import newScalesPage from "@/components/pages/newScalesPage"
+import newInterPage from "@/components/pages/newInterPage"
+import UpdateProfilePage from "@/components/pages/UpdateProfilePage"
 
 const routes = [
     {
@@ -62,7 +66,23 @@ const routes = [
         path: '/subtests',
         component: subtestsPage
     },
+    {
+        path:'/preview',
+        component: previewPage
+    },
+    {
+        path:'/newScales',
+        component: newScalesPage
+    },
+    {
+        path:'/newInter',
+        component: newInterPage
+    },
+    {
+        path:'/updateProfile',
+        component: UpdateProfilePage
 
+    }
 ]
 
 const router = createRouter({
