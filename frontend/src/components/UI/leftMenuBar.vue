@@ -7,10 +7,17 @@
         icon="home"
         @click="this.$router.push('/main')"
         ></menuBarItem>
-        <menuBarItem title="Тесты"
-        icon="library_books"
-        @click="this.$router.push('/tests')"
-        ></menuBarItem>
+        <!--доработка появления/исчезновения-->
+        <div class="relative" v-on:mouseenter="mouseenterSM">
+            <menuBarItem title="Тесты"
+            icon="library_books"
+            @click="this.$router.push('/tests')"
+            ></menuBarItem>
+            <ul :class="isHover ? 'submenu-item': 'hidden'">
+                <li @click="this.$router.push('/scales')">Шкалы</li>
+                <li @click="this.$router.push('/interpretations')">Интерпретации</li>
+            </ul>
+        </div>
         <menuBarItem title="Попытки"
         icon="data_thresholding"
         @click="this.$router.push('/attempts')"
@@ -30,9 +37,14 @@ export default{
             type: Boolean,
             value: true,
         },
+        isHover:{
+            type: Boolean,
+            value: true,
+        },
         data(){
             return{
-                isOpen: false
+                isOpen: false,
+                isHover: false,
             }
         },
         methods:{
@@ -43,6 +55,12 @@ export default{
             hideLM(){
                 this.isOpen = false;
                 this.$emit('toggleClass', this.isOpen);
+            },
+            mouseoutSM(){
+                this.isHover = false;
+            },
+            mouseenterSM(){
+                this.isHover = true;
             }
         }
     }
@@ -50,6 +68,15 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+.submenu-item{
+    @apply absolute top-6 left-36 bg-white/60 pt-3 pb-3  rounded-xl border-l-[1px] border-t-0 border-b-2 border-r-[1px] border-white;
+    li{
+        @apply px-3 p-3;
+        &:hover{
+            @apply bg-hover-btn-dm text-sm-blue;
+        }
+    }
+}
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
 //активная боковая панель
 .leftBar{
@@ -79,6 +106,9 @@ export default{
     }
     h2{
         @apply hidden;
+    }
+    .submenu-item{
+        @apply left-[4.5rem];
     }
 
 }

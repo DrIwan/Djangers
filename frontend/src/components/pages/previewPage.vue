@@ -1,0 +1,24 @@
+<template>
+    <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+    <div :class="LBisOpen? 'container': 'container big-container'">
+        <headerPg></headerPg>
+        <previewTest></previewTest>
+    </div>
+</template>
+<script>
+export default{
+    data() {
+        return {
+            LBisOpen: false,
+        };
+    },
+    methods: {
+        toggleOpen(inf) {
+            this.LBisOpen = inf;
+        }
+    },
+}
+</script>
+<style lang="scss" scoped>
+
+</style>

@@ -18,8 +18,14 @@
     export default{
         name: 'previewTest',
         props: {
-            'title': String,
-            'subtext':  String,
+            'title': {
+                type: String,
+                default: 'Какой-то тест'
+            },
+            'subtext':  {
+                type: String,
+                default: 'От базовых знаний о том, как грамотно распоряжаться деньгами, во многом зависит твой успех в будущем. С помощью этого теста ты можешь проверить, как будет складываться твоя личная финансовая жизнь. '
+            },
             'attempts':{
                 type: Number,
                 default: 1

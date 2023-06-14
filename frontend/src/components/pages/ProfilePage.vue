@@ -22,7 +22,7 @@
                         <!--доработать-->
                         <div>Мужской</div>
                     </div>
-                    <button class="edit-btn"><span class="material-symbols-rounded">edit</span>Изменить</button>
+                    <button class="edit-btn" @click="this.$router.push('/updateProfile')"><span class="material-symbols-rounded">edit</span>Изменить</button>
                 </div>
             </div>
             <!--смена вкладок-->
