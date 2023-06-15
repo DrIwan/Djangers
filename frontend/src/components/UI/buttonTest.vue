@@ -1,5 +1,5 @@
 <template>
-    <div class="block-test">
+    <div class="block-test ">
         <p class="title-test">{{ title }}</p>
         <button class="btn-test"><span class="material-symbols-rounded">arrow_forward</span></button>
     </div>
@@ -9,7 +9,12 @@
  export default{
         name: 'buttonTest',
         props: ['title'],
+        ds: 1,
+        methods:{
+
+        },
     }
+
 </script>
 <style lang="scss" scoped>
 .block-test{

@@ -1,11 +1,23 @@
 <template>
-    <div class="scroll-box">
+    <div :class="right? 'scroll-box': ''">
         <slot></slot>
     </div>
 </template>
+<!-- Свойство типа добавил, изменение его пока не готово...-->
 <script>
  export default{
         name: 'scrollBox',
+        data(){
+            return{
+                right: true,
+            }
+        },
+        methods:{
+
+            toggleRight(){
+                this.right=!this.right;
+            }
+        }
     }
 </script>
 <style lang="scss" scoped>

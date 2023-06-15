@@ -6,14 +6,13 @@
             <glassBlock class="admin-menu" v-if="true" style="height: 70vh!important;">
                 <scrollBox class="scrl">
                     <div class="scrl-cont">
-                        <!--добавить цикл-->
-                        <buttonAttemtsAd></buttonAttemtsAd>
-                        <buttonAttemtsAd></buttonAttemtsAd>
-                        <buttonAttemtsAd></buttonAttemtsAd>
-                        <buttonAttemtsAd></buttonAttemtsAd>
-                        <buttonAttemtsAd></buttonAttemtsAd>
-                        <buttonAttemtsAd></buttonAttemtsAd>
-                        <buttonAttemtsAd></buttonAttemtsAd>
+                        <buttonAttemtsAd
+                            v-for="item in attempts" :key="item.index"
+                            :name_worker= "item.name"
+                            :time="item.time"
+                            :name_test="item.description"
+                            @click="$router.push(`/attempt/${item.index}`)">
+                        </buttonAttemtsAd>
                     </div>
                 </scrollBox>
                 <div class="line"></div>
@@ -46,6 +45,7 @@ export default{
     data(){
         return{
             LBisOpen: false,
+            attempts :[{index: 1, name: 222,time: '01.04.2023 18:34:26', description: 333}, {index: 2, name: 322, time: '01.06.2023 18:34:26', description: 433}]
         }
     },
     methods:{

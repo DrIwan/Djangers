@@ -15,6 +15,11 @@ import previewPage from "@/components/pages/previewPage"
 import newScalesPage from "@/components/pages/newScalesPage"
 import newInterPage from "@/components/pages/newInterPage"
 import UpdateProfilePage from "@/components/pages/UpdateProfilePage"
+import attemptPage from "@/components/pages/attemptPage"
+import interpretationPage from "@/components/pages/interpretationPage"
+import scalePage from "@/components/pages/scalePage"
+import testPage from "@/components/pages/testPage"
+import subtestPage from "@/components/pages/subtestPage"
 
 const routes = [
     {
@@ -122,7 +127,42 @@ const routes = [
         meta:{
             title: 'Попытки'
         }
-    }
+    },
+    {
+        path:'/attempt/:attemptId',
+        component: attemptPage,
+        meta:{
+            title: 'Попытка'
+        }
+    },
+    {
+        path:'/interpretation/:interpretationId',
+        component: interpretationPage,
+        meta:{
+            title: 'Интерпретация'
+        }
+    },
+    {
+        path:'/scale/:scaleId',
+        component: scalePage,
+        meta:{
+            title: 'Шкала'
+        }
+    },
+    {
+        path:'/test/:testId',
+        component: testPage,
+        meta:{
+            title: 'Тест'
+        }
+    },
+    {
+        path:'/subtest/:subtestId',
+        component: subtestPage,
+        meta:{
+            title: 'СубТест'
+        }
+    },
 ]
 
 const router = createRouter({
