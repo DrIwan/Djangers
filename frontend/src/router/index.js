@@ -5,7 +5,6 @@ import ProfilePage from "@/components/pages/ProfilePage"
 import RegistrationPage from "@/components/pages/RegistrationPage"
 import LoginPage from "@/components/pages/loginPage"
 import mainPage from "@/components/pages/mainPage"
-import profilePage from "@/components/pages/ProfilePage"
 import attemptsPage from "@/components/pages/attemptsPage"
 import testsPage from "@/components/pages/testsPage"
 import workersPage from "@/components/pages/workersPage"
@@ -20,74 +19,119 @@ import UpdateProfilePage from "@/components/pages/UpdateProfilePage"
 const routes = [
     {
         path: '/',
-        component: HomePage
+        component: HomePage,
+        meta:{
+            title: 'Главная'
+        }
     },
     {
         path: '/registration',
-        component: RegistrationPage
+        component: RegistrationPage,
+        meta:{
+            title: 'Регистрация'
+        }
     },
     {
         path: '/profile',
-        component: ProfilePage
+        component: ProfilePage,
+        meta:{
+            title: 'Личный кабинет'
+        }
     },
     {
         path: '/login',
-        component: LoginPage
+        component: LoginPage,
+        meta:{
+            title: 'Вход в систему'
+        }
     },
     {
         path: '/main',
-        component: mainPage
-    },
-    {
-        path: '/profile',
-        component: profilePage
-    },
-    {
-        path: '/attempts',
-        component: attemptsPage
+        component: mainPage,
+        meta:{
+            title: 'Меню'
+        }
     },
     {
         path: '/tests',
-        component: testsPage
+        component: testsPage,
+        meta:{
+            title: 'Тесты'
+        }
     },
     {
         path: '/workers',
-        component: workersPage
+        component: workersPage,
+        meta:{
+            title: 'Учетные записи'
+        }
     },
     {
         path: '/scales',
-        component: scalesPage
+        component: scalesPage,
+        meta:{
+            title: 'Шкалы'
+        }
     },
     {
         path: '/interpretations',
-        component: interpretationsPage
+        component: interpretationsPage,
+        meta:{
+            title: 'Интерпретации'
+        }
     },
     {
         path: '/subtests',
-        component: subtestsPage
+        component: subtestsPage,
+        meta:{
+            title: 'Субтесты'
+        }
     },
     {
         path:'/preview',
-        component: previewPage
+        component: previewPage,
+        meta:{
+            title: 'Превью'
+        }
     },
     {
         path:'/newScales',
-        component: newScalesPage
+        component: newScalesPage,
+        meta:{
+            title: 'Создание шкалы'
+        }
     },
     {
         path:'/newInter',
-        component: newInterPage
+        component: newInterPage,
+        meta:{
+            title: 'Создание интерпретации'
+        }
     },
     {
         path:'/updateProfile',
-        component: UpdateProfilePage
+        component: UpdateProfilePage,
+        meta:{
+            title: 'Изменение профиля'
+        }
 
+    },
+    {
+        path:'/attempts',
+        component: attemptsPage,
+        meta:{
+            title: 'Попытки'
+        }
     }
 ]
 
 const router = createRouter({
     routes,
     history: createWebHistory(process.env.BASE_URL)
+})
+router.beforeEach((to,from,next)=>{
+    document.title = `${to.meta.title}`;
+    next();
 })
 
 export default router

@@ -89,7 +89,7 @@ body{
 /*МЕНЮ ПОЛЬЗОВАТЕЛЯ*/
 
 .container{
-    @apply absolute w-[72%] left-[20rem] pl-[100px] overflow-y-scroll h-screen;
+    @apply z-0 absolute w-[72%] left-[20rem] pl-[100px] overflow-y-scroll h-screen;
     .admin{
         @apply bg-[url('./img/admin.png')];
     }
@@ -149,5 +149,8 @@ body{
             }
         }
     }
+}
+.def-img{
+    @apply bg-[url('./img/defaultImg.png')] bg-cover bg-center;
 }
 

@@ -3,10 +3,10 @@
                     <select
                         required placeholder=" "
                         class="s-main hidden"
-                        v-model="item"
+                        v-bind:value="item"
                         >
-                            <option value="man"><div class="line"></div>Мужской</option>
-                            <option value="woman"><div class="line l-2"></div>Женский</option>
+                            <option value="Мужской"><div class="line"></div>Мужской</option>
+                            <option value="Женский"><div class="line l-2"></div>Женский</option>
                     </select>
                     <div class="select-b">
                         {{item}}
@@ -15,15 +15,15 @@
                     :class="isOpen? 'custom-select' : 'custom-select hidden'"
                     >
                         <li
-                            :class="isActive?'custom-option active-option': 'custom-option'"
+                            :class="this.item=='Мужской'?'custom-option active-option': 'custom-option'"
                             rel="man"
-                            v-on:click="onClickmenu"
+                            v-on:click="this.item='Мужской'"
                             >
                             <div class="line"></div>Мужской</li>
                         <li
-                        :class="isActive?'custom-option': 'custom-option  active-option'"
+                        :class="this.item=='Женский'?'custom-option active-option': 'custom-option'"
                             rel="woman"
-                            v-on:click="onClickmenu"
+                            v-on:click="this.item='Женский'"
                             >
                             <div class="line l-2"></div>Женский</li>
                     </ul>
@@ -44,9 +44,6 @@
             }
         },
         methods:{
-            onClickmenu(){
-
-            },
             openMenu(){
                 this.isOpen = !this.isOpen
             }
@@ -85,7 +82,7 @@
 
         }
         .line{
-            @apply w-[0.1rem] h-10 bg-dark-blue-3 absolute top-0 left-0 hidden;
+            @apply w-[0.1rem] h-10 bg-dark-blue-3 absolute top-0 left-0 hidden ml-0 pl-0;
         }
         .l-2{
             @apply top-[2.5rem];
