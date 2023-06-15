@@ -8,7 +8,7 @@
         @click="this.$router.push('/main')"
         ></menuBarItem>
         <!--доработка появления/исчезновения-->
-        <div class="relative" v-on:mouseenter="mouseenterSM">
+        <div class="relative" v-on:mouseenter="mouseenterSM" v-on:mouseleave="mouseleaveSM">
             <menuBarItem title="Тесты"
             icon="library_books"
             @click="this.$router.push('/tests')"
@@ -56,7 +56,7 @@ export default{
                 this.isOpen = false;
                 this.$emit('toggleClass', this.isOpen);
             },
-            mouseoutSM(){
+            mouseleaveSM(){
                 this.isHover = false;
             },
             mouseenterSM(){
@@ -71,16 +71,16 @@ export default{
 .submenu-item{
     @apply absolute top-6 left-36 bg-white/60 pt-3 pb-3  rounded-xl border-l-[1px] border-t-0 border-b-2 border-r-[1px] border-white;
     li{
-        @apply px-3 p-3;
+        @apply px-3 p-3 cursor-pointer;
         &:hover{
-            @apply bg-hover-btn-dm text-sm-blue;
+            @apply bg-hover-btn-dm/60 text-sm-blue;
         }
     }
 }
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0);
 //активная боковая панель
 .leftBar{
-    @apply h-screen bg-dark-blue-3 block w-80 fixed top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 transition-all ease-linear duration-500;
+    @apply z-10 h-screen bg-dark-blue-3 block w-80 fixed top-0 left-0 flex flex-col justify-start items-start pl-20 pt-9 transition-all ease-linear duration-500;
     background: linear-gradient(354.3deg, rgba(255, 255, 255, 0.37) -3.2%, rgba(255, 255, 255, 0.1702) 49.11%, rgba(255, 255, 255, 0.1369) 100%);
 
     h2,.double-logo{
