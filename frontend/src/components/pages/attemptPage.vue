@@ -1,7 +1,7 @@
 <template>
-     <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+     <leftMenuBar numActive="2"  @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
-            <headerPg></headerPg>
+            <headerPg numActive="2"></headerPg>
             <h2 class="name-page">Попытка</h2>
 
     </div>

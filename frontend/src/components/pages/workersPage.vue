@@ -1,11 +1,10 @@
 <template>
-     <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+     <leftMenuBar numActive="3" @toggleClass="toggleOpen($event)"></leftMenuBar>
      <div :class="LBisOpen? 'container': 'container big-container'">
-            <headerPg></headerPg>
+            <headerPg numActive="0"></headerPg>
             <h2 class="name-page">Работники</h2>
             <glassBlock class="admin-menu" style="height: 70vh!important;">
-                <scrollBox v-if="tabs==0" class="scrl">
-                    <div class="scrl-cont">
+                <scrollBox v-if="tabs==0" class="scrl" left>
                         <!--добавить цикл-->
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
@@ -17,10 +16,8 @@
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
-                    </div>
                 </scrollBox>
-                <scrollBox v-else-if="tabs==1" class="scrl">
-                    <div class="scrl-cont">
+                <scrollBox v-if="tabs==1" class="scrl" left>
                         <!--добавить цикл-->
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
@@ -32,10 +29,8 @@
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
-                    </div>
                 </scrollBox>
-                <scrollBox v-else class="scrl">
-                    <div class="scrl-cont">
+                <scrollBox v-if="tabs==2" class="scrl" left>
                         <!--добавить цикл-->
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
@@ -47,7 +42,6 @@
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
                         <buttonWorker></buttonWorker>
-                    </div>
                 </scrollBox>
                 <div class="line"></div>
                 <ul class="tabs">
@@ -84,10 +78,6 @@ export default{
     @apply h-full flex flex-row;
     .scrl{
         @apply w-[75%];
-        direction: rtl;
-        .scrl-cont{
-            direction: ltr;
-    }
     }
 
 }

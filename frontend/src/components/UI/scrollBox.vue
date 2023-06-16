@@ -1,23 +1,18 @@
 <template>
-    <div :class="right? 'scroll-box': ''">
-        <slot></slot>
+    <div :class="!left? 'scroll-box': 'scroll-box left'">
+        <div :class="!left? '': 'cont-scrl'">
+            <slot></slot>
+        </div>
     </div>
 </template>
-<!-- Свойство типа добавил, изменение его пока не готово...-->
+
 <script>
  export default{
         name: 'scrollBox',
-        data(){
-            return{
-                right: true,
-            }
-        },
-        methods:{
-
-            toggleRight(){
-                this.right=!this.right;
-            }
+        props: {
+            left: Boolean
         }
+
     }
 </script>
 <style lang="scss" scoped>
@@ -35,6 +30,12 @@
     &::-webkit-scrollbar-thumb {
         @apply rounded bg-dark-blue/50;
     }
+}
 
+.left{
+    direction: rtl;
+    .cont-scrl{
+        direction: ltr;
+    }
 }
 </style>

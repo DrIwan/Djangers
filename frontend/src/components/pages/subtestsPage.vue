@@ -1,20 +1,19 @@
 <template>
-    <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+    <leftMenuBar numActive="1"  @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
-        <headerPg></headerPg>
+        <headerPg numActive="1"></headerPg>
         <div class="header-test">
             <h2 class="name-page" style="margin: 0;">Субтесты</h2>
 
-            <div class="express-btn">
-                <span class="material-symbols-rounded">add</span>
-                <span class="material-symbols-rounded">refresh</span>
-                <span class="material-symbols-rounded">delete</span>
-            </div>
+            <div v-if="true" class="express-btn">
+                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">add</span>
+                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">refresh</span>
+                    <span v-on:click="this.$refs.delWind.toogleOpen()" class="material-symbols-rounded">delete</span>
+                </div>
          </div>
          <glassBlock class="gl" style="height: 70vh!important;">
                 <div class="up-menu">
-                    <scrollBox class="mini-menu">
-                        <div class="content-menu">
+                    <scrollBox class="mini-menu" left>
                             <div v-for="item in subTests" :key="item.id">
                             <buttonTest
                                 v-if="item.opn === opCh"
@@ -22,7 +21,6 @@
                                 @click="$router.push(`/subtest/${item.id}`)"
                             ></buttonTest>
                             </div>
-                        </div>
 
                     </scrollBox>
                     <div class="line"></div>
@@ -44,6 +42,7 @@
 
                 <!--пейджер добавить-->
             </glassBlock>
+            <modalWind ref="delWind" title="Предупреждение" text="Вы уверены, что хотите удалить? После удаления субтест не возобновить."></modalWind>
     </div>
 </template>
 <script>
@@ -81,10 +80,6 @@ export default{
         @apply h-full flex flex-row;
         .mini-menu{
             @apply w-[75%];
-            direction: rtl;
-            .content-menu{
-                direction: ltr;
-            }
         }
 
     }

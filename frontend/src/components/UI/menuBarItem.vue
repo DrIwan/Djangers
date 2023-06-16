@@ -11,10 +11,11 @@
 
 <script>
     export default{
-
         name:'menuBarItem',
-
-        props: ['title', 'icon',],
+        props: {
+            'title': String,
+            'icon': String,
+        }
     }
 </script>
 <style lang="scss" scoped>

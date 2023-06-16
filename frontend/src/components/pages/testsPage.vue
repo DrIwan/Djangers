@@ -1,27 +1,39 @@
 <template>
-     <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+     <leftMenuBar numActive="1"  @toggleClass="toggleOpen($event)"></leftMenuBar>
      <div :class="LBisOpen? 'container': 'container big-container'">
-            <headerPg></headerPg>
+            <headerPg numActive="1"></headerPg>
             <div class="header-test">
                 <h2 class="header-page">Тесты</h2>
                     <!--проверка статуса-->
                 <div v-if="true" class="express-btn">
-                    <span class="material-symbols-rounded">add</span>
-                    <span class="material-symbols-rounded">refresh</span>
-                    <span class="material-symbols-rounded">delete</span>
+                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">add</span>
+                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">refresh</span>
+                    <span v-on:click="this.$refs.delWind.toogleOpen()" class="material-symbols-rounded">delete</span>
                     <!--проверка фильтр на скрытые/др. вкладка-->
-                    <span v-if="opCh ===2" class="material-symbols-rounded">visibility_off</span>
-                    <span v-if="opCh !=2" class="material-symbols-rounded">visibility</span>
+                    <span
+                    v-if="opCh ===2"
+                    v-on:click="this.$refs.publishWind.toogleOpen()"
+                    class="material-symbols-rounded">visibility</span>
+                    <span
+                    v-else
+                    v-on:click="this.$refs.hideWind.toogleOpen()"
+                    class="material-symbols-rounded">visibility_off</span>
                     <!--проверка фильтр на черновики/др. вкладка-->
-                    <span v-if="opCh ===3" class="material-symbols-rounded">inventory_2</span>
-                    <span v-if="opCh !=3" class="material-symbols-rounded">outbox</span>
+                    <span
+                    v-if="opCh ===3"
+                    v-on:click="this.$refs.draftWind.toogleOpen()"
+                    class="material-symbols-rounded">outbox</span>
+                    <span
+                    v-else
+                    v-on:click="this.$refs.publishWind.toogleOpen()"
+                    class="material-symbols-rounded">inventory_2</span>
                 </div>
             </div>
             <!--проверка статуса-->
             <glassBlock v-if="true" class="gl" style="height: 70vh!important;">
                 <div class="up-menu">
-                    <scrollBox class="mini-menu">
-                        <div class="content-menu">
+                    <scrollBox class="mini-menu" left>
+
                             <div v-for="item in tests" :key="item.id">
                             <buttonTest
                                 v-if="item.opn === opCh"
@@ -29,7 +41,7 @@
                                 @click="$router.push(`/test/${item.id}`)"
                             ></buttonTest>
                             </div>
-                        </div>
+
 
                     </scrollBox>
                     <div class="line"></div>
@@ -52,7 +64,7 @@
                 <!--пейджер добавить-->
             </glassBlock>
             <glassBlock v-if="false" class="gl" style="height: 70vh!important;">
-                <scrollBox>
+                <scrollBox class="mini-menu" left>
                     <div v-for="item in tests" :key="item.id">
                             <buttonTest
                                 v-if="item.opn === opCh"
@@ -64,6 +76,10 @@
                 <!--пейджер добавить-->
             </glassBlock>
         </div>
+        <modalWind ref="hideWind" title="Предупреждение" text="Вы уверены, что хотите скрыть тест?"></modalWind>
+        <modalWind ref="publishWind" title="Предупреждение" text="Вы уверены, что хотите опубликовать тест?"></modalWind>
+        <modalWind ref="draftWind" title="Предупреждение" text="Вы уверены, что хотите сделать тест черновиком?"></modalWind>
+        <modalWind ref="delWind" title="Предупреждение" text="Вы уверены, что хотите удалить? После удаления тест не возобновить."></modalWind>
 </template>
 
 <script>
@@ -102,10 +118,6 @@ export default{
         @apply h-full flex flex-row;
         .mini-menu{
             @apply w-[75%];
-            direction: rtl;
-            .content-menu{
-                direction: ltr;
-            }
         }
 
     }
