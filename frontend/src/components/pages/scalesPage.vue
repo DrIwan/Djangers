@@ -1,28 +1,37 @@
 <template>
-    <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+    <leftMenuBar numActive="1"  @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
-        <headerPg></headerPg>
+        <headerPg numActive="1"></headerPg>
         <div class="header-test">
             <h2 class="name-page" style="margin: 0;">Шкалы</h2>
 
-            <div class="express-btn">
-                <span class="material-symbols-rounded"
-                    @click="this.$router.push('/newScales')"
-                >add</span>
-                <span class="material-symbols-rounded">refresh</span>
-                <span class="material-symbols-rounded">delete</span>
-                <!--проверка фильтр на скрытые/др. вкладка-->
-                <span v-if="opCh ===2" class="material-symbols-rounded">visibility_off</span>
-                <span v-if="opCh !=2" class="material-symbols-rounded">visibility</span>
-                <!--проверка фильтр на черновики/др. вкладка-->
-                <span v-if="opCh ===3" class="material-symbols-rounded">inventory_2</span>
-                 <span v-if="opCh !=3" class="material-symbols-rounded">outbox</span>
-            </div>
+            <div v-if="true" class="express-btn">
+                    <span v-on:click="this.$router.push('/newScales')" class="material-symbols-rounded">add</span>
+                    <span v-on:click="this.$router.push('/newScales')" class="material-symbols-rounded">refresh</span>
+                    <span v-on:click="this.$refs.delWind.toogleOpen()" class="material-symbols-rounded">delete</span>
+                    <!--проверка фильтр на скрытые/др. вкладка-->
+                    <span
+                    v-if="opCh ===2"
+                    v-on:click="this.$refs.publishWind.toogleOpen()"
+                    class="material-symbols-rounded">visibility</span>
+                    <span
+                    v-else
+                    v-on:click="this.$refs.hideWind.toogleOpen()"
+                    class="material-symbols-rounded">visibility_off</span>
+                    <!--проверка фильтр на черновики/др. вкладка-->
+                    <span
+                    v-if="opCh ===3"
+                    v-on:click="this.$refs.draftWind.toogleOpen()"
+                    class="material-symbols-rounded">outbox</span>
+                    <span
+                    v-else
+                    v-on:click="this.$refs.publishWind.toogleOpen()"
+                    class="material-symbols-rounded">inventory_2</span>
+                </div>
          </div>
          <glassBlock class="gl" style="height: 70vh!important;">
                 <div class="up-menu">
-                    <scrollBox class="mini-menu">
-                        <div class="content-menu">
+                    <scrollBox class="mini-menu" left>
                             <div v-for="item in scales" :key="item.id">
                             <buttonTest
                                 v-if="item.opn === opCh"
@@ -30,7 +39,6 @@
                                 @click="$router.push(`/scale/${item.id}`)"
                             ></buttonTest>
                             </div>
-                        </div>
 
                     </scrollBox>
                     <div class="line"></div>
@@ -52,6 +60,10 @@
 
                 <!--пейджер добавить-->
             </glassBlock>
+            <modalWind ref="hideWind" title="Предупреждение" text="Вы уверены, что хотите скрыть шкалу?"></modalWind>
+            <modalWind ref="publishWind" title="Предупреждение" text="Вы уверены, что хотите опубликовать шкалу?"></modalWind>
+            <modalWind ref="draftWind" title="Предупреждение" text="Вы уверены, что хотите сделать шкалу черновиком?"></modalWind>
+            <modalWind ref="delWind" title="Предупреждение" text="Вы уверены, что хотите удалить? После удаления шкалу не возобновить."></modalWind>
     </div>
 </template>
 <script>
@@ -81,10 +93,6 @@ export default{
         @apply h-full flex flex-row;
         .mini-menu{
             @apply w-[75%];
-            direction: rtl;
-            .content-menu{
-                direction: ltr;
-            }
         }
 
     }

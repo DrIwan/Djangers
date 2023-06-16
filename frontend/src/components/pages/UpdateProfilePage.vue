@@ -1,7 +1,7 @@
 <template>
-     <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+     <leftMenuBar  numActive="0" @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
-        <headerPg></headerPg>
+        <headerPg numActive="0"></headerPg>
         <h2 class="name-page">Личный кабинет</h2>
         <div class="sub-label">Личные данные-редактирование</div>
         <glassBlock class="gl" style="height: 70vh !important; padding: 4rem;">
@@ -18,7 +18,7 @@
                 <div class="line"></div>
                 <div class="addit-set">
                     <ul class="control-box">
-                        <li><button><span class="material-symbols-rounded">update</span></button></li>
+                        <li><button @click="this.$router.push('/profile')"><span class="material-symbols-rounded">update</span></button></li>
                         <li><button @click="this.$router.push('/profile')"><span class="material-symbols-rounded">close</span></button></li>
                     </ul>
                     <h3 class="label-frm">Логин</h3>

@@ -143,7 +143,7 @@ body{
         @apply flex flex-row;
         span{
             background: linear-gradient(303.7deg, rgba(255, 255, 255, 0.69) 0.17%, rgba(255, 255, 255, 0.49) 42.99%, rgba(255, 255, 255, 0.25) 98.03%);
-            @apply text-dark-blue text-3xl rounded-lg p-1 ml-2 border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white shadow-lg;
+            @apply text-dark-blue text-3xl rounded-lg p-1 ml-2 border-t-0 border-r-[2px] border-b-[2px] border-l-[1px] border-white shadow-lg cursor-pointer;
             &:hover{
                 @apply text-sm-blue scale-105;
             }

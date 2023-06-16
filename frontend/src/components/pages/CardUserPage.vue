@@ -1,17 +1,19 @@
 <template>
     <leftMenuBar  numActive="0" @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
-        <headerPg numActive="-1"></headerPg>
-        <h2 class="name-page">Личный кабинет</h2>
-
-        <div v-if="tabs==0" class="sub-label">Личные данные</div>
-        <div v-else class="sub-label">Попытки</div>
+        <headerPg numActive="0"></headerPg>
+        <h2 class="name-page">Карточка Пользователя</h2>
         <glassBlock class="gb" style="height: 70vh!important;">
             <!--смена вкладок-->
             <div v-if="tabs==0" class="content-lk">
                 <imageChange></imageChange>
                 <div class="info-block">
                     <div class="text">
+                        <div class="ctrl-box">
+                            <span
+                            v-on:click="this.$refs.upWind.toogleOpen()"
+                            class="material-symbols-rounded">school</span>
+                        </div>
                         <h2>ФИО</h2>
                         <div>{{name}}</div>
                         <h2>Возраст</h2>
@@ -19,7 +21,7 @@
                         <h2>Пол</h2>
                         <div>{{gender}}</div>
                     </div>
-                    <button class="edit-btn" @click="this.$router.push('/updateProfile')"><span class="material-symbols-rounded">edit</span>Изменить</button>
+                    <button class="edit-btn" @click="this.$router.push('/updateCardUser')"><span class="material-symbols-rounded">edit</span>Изменить</button>
                 </div>
             </div>
             <!--смена вкладок-->
@@ -44,6 +46,7 @@
             </ul>
         </glassBlock>
     </div>
+    <modalWind ref="upWind" title="Предупреждение" text="Вы уверены, что хотите этого пользователя преподавателем?"></modalWind>
 </template>
 
 <script>
@@ -80,7 +83,13 @@ export default{
     .content-lk{
         @apply flex flex-row items-start w-[70%] h-full p-9 font-monst text-xl;
         .info-block{
-            @apply pl-8 font-bold h-[90%] flex flex-col justify-between;
+            @apply pl-8 font-bold h-[90%] flex flex-col justify-between w-1/2;
+            .ctrl-box{
+                @apply w-full flex flex-row justify-end;
+                span{
+                    @apply bg-white p-2 rounded shadow-[inset_6px_8px_4px] shadow-[#000]/10 cursor-pointer;
+                }
+            }
             .text{
 
                 h2{

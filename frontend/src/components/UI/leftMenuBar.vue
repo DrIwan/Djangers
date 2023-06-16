@@ -5,25 +5,30 @@
         <button class="double-logo" v-on:click="openLM">T+</button>
         <menuBarItem title="Главная"
         icon="home"
+        :class="numActive=='0'? 'active-lm-btn': ''"
         @click="this.$router.push('/main')"
         ></menuBarItem>
         <!--доработка появления/исчезновения-->
         <div class="relative" v-on:mouseenter="mouseenterSM" v-on:mouseleave="mouseleaveSM">
             <menuBarItem title="Тесты"
             icon="library_books"
+            :class="numActive=='1'? 'active-lm-btn': ''"
             @click="this.$router.push('/tests')"
             ></menuBarItem>
             <ul :class="isHover ? 'submenu-item': 'hidden'">
                 <li @click="this.$router.push('/scales')">Шкалы</li>
                 <li @click="this.$router.push('/interpretations')">Интерпретации</li>
+                <li @click="this.$router.push('/subtests')">Субтесты</li>
             </ul>
         </div>
         <menuBarItem title="Попытки"
         icon="data_thresholding"
+        :class="numActive=='2'? 'active-lm-btn': ''"
         @click="this.$router.push('/attempts')"
         ></menuBarItem>
         <!-- Необходима проверка на админа для этой кнопочки-->
         <menuBarItem title="Работники"
+        :class="numActive=='3'? 'active-lm-btn': ''"
         icon="person"
         @click="this.$router.push('/workers')"
         ></menuBarItem>
@@ -44,7 +49,13 @@ export default{
         data(){
             return{
                 isOpen: false,
-                isHover: false,
+                isHover: false
+            }
+        },
+        props:{
+            numActive:{
+                type:String,
+                default:'0'
             }
         },
         methods:{

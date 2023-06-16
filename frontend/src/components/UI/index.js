@@ -14,6 +14,7 @@ import buttonAttemts from "@/components/UI/buttonAttemts"
 import buttonAttemtsAd from "@/components/UI/buttonAttemtsAd"
 import buttonWorker from "@/components/UI/buttonWorker"
 import imageChange from "@/components/UI/imageChange"
+import modalWind from "@/components/UI/modalWind"
 
 export default[
     buttonRg,
@@ -31,5 +32,6 @@ export default[
     buttonAttemts,
     buttonAttemtsAd,
     buttonWorker,
-    imageChange
+    imageChange,
+    modalWind
 ]

@@ -47,6 +47,10 @@ module.exports = {
            sp:{
                 '100%':{transform: 'rotate(360deg)' },
            },
+           smth:{
+            '0%':{opacity: '0' },
+            '100%':{opacity: '1' },
+           }
 
         },
         animation: {
@@ -54,6 +58,7 @@ module.exports = {
             'boun-cont': 'boun 8s ease-in infinite',
             'boun-cont-2': 'boun_2 8s ease-in infinite',
             'csp':'sp 10s ease-in infinite',
+            'sm':'smth 1s ease-in forwards'
         }
 
     },

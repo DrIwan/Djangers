@@ -1,11 +1,10 @@
 <template>
-    <leftMenuBar   @toggleClass="toggleOpen($event)"></leftMenuBar>
+    <leftMenuBar numActive="2"  @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
-            <headerPg></headerPg>
+            <headerPg numActive="2"></headerPg>
             <h2 class="name-page">Попытки</h2>
             <glassBlock class="admin-menu" v-if="true" style="height: 70vh!important;">
-                <scrollBox class="scrl">
-                    <div class="scrl-cont">
+                <scrollBox class="scrl" left>
                         <buttonAttemtsAd
                             v-for="item in attempts" :key="item.index"
                             :name_worker= "item.name"
@@ -13,7 +12,6 @@
                             :name_test="item.description"
                             @click="$router.push(`/attempt/${item.index}`)">
                         </buttonAttemtsAd>
-                    </div>
                 </scrollBox>
                 <div class="line"></div>
                 <ul class="tabs">
@@ -25,11 +23,8 @@
             </glassBlock>
 
             <glassBlock v-if="false" style="height: 70vh!important;">
-                <scrollBox>
-                    <!--добавить цикл-->
-                    <!--пример-->
-                    <buttonAttemts picture_src="https://i.pinimg.com/236x/26/62/82/266282d9af32d5a40a0ea59520ce6eac.jpg"></buttonAttemts>
-                      <!--пример-->
+                <scrollBox class="scrl" left>
+                    <buttonAttemts picture_src=""></buttonAttemts>
                     <buttonAttemts></buttonAttemts>
                     <buttonAttemts></buttonAttemts>
                     <buttonAttemts></buttonAttemts>
@@ -60,10 +55,6 @@ export default{
     @apply h-full flex flex-row;
     .scrl{
         @apply w-[75%];
-        direction: rtl;
-        .scrl-cont{
-            direction: ltr;
-    }
     }
 
 }

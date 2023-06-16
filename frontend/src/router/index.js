@@ -18,8 +18,10 @@ import UpdateProfilePage from "@/components/pages/UpdateProfilePage"
 import attemptPage from "@/components/pages/attemptPage"
 import interpretationPage from "@/components/pages/interpretationPage"
 import scalePage from "@/components/pages/scalePage"
-import testPage from "@/components/pages/testPage"
 import subtestPage from "@/components/pages/subtestPage"
+import CardUserPage from "@/components/pages/CardUserPage"
+import updateCardUserPage from "@/components/pages/updateCardUserPage"
+import bindPage from "@/components/pages/bindPage"
 
 const routes = [
     {
@@ -93,13 +95,6 @@ const routes = [
         }
     },
     {
-        path:'/preview',
-        component: previewPage,
-        meta:{
-            title: 'Превью'
-        }
-    },
-    {
         path:'/newScales',
         component: newScalesPage,
         meta:{
@@ -151,9 +146,9 @@ const routes = [
     },
     {
         path:'/test/:testId',
-        component: testPage,
+        component: previewPage,
         meta:{
-            title: 'Тест'
+            title: 'Превью теста'
         }
     },
     {
@@ -161,6 +156,27 @@ const routes = [
         component: subtestPage,
         meta:{
             title: 'СубТест'
+        }
+    },
+    {
+        path:'/cardUser',
+        component: CardUserPage,
+        meta:{
+            title: 'Карточка пользователя'
+        }
+    },
+    {
+        path:'/updateCardUser',
+        component: updateCardUserPage,
+        meta:{
+            title: 'Изменение карточки'
+        }
+    },
+    {
+        path:'/bind',
+        component: bindPage,
+        meta:{
+            title: 'Заявка'
         }
     },
 ]
