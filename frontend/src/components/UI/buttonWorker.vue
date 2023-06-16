@@ -1,7 +1,7 @@
 <template>
    <glassBlock class="ch-block">
         <img :src=picture_src :class="isUser? 'icon-user': 'hidden'"/>
-        <h2 class="name-user">{{ name_worker }}</h2>
+        <h2 class="name-user">{{ worker }}</h2>
    </glassBlock>
 </template>
 <!--для заявок isUser=false-->
@@ -20,10 +20,11 @@
         },
         props:{
             'picture_src': String,
-            'name_worker':{
+            'worker':{
                 type: String,
                 default: 'Королева Мария Михайловна'
             },
+
         }
     }
 </script>

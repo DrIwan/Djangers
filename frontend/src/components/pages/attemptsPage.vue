@@ -12,6 +12,7 @@
                             :name_test="item.description"
                             @click="$router.push(`/attempt/${item.index}`)">
                         </buttonAttemtsAd>
+                        <pagination>dsadsa</pagination>
                 </scrollBox>
                 <div class="line"></div>
                 <ul class="tabs">
@@ -24,10 +25,13 @@
 
             <glassBlock v-if="false" style="height: 70vh!important;">
                 <scrollBox class="scrl" left>
-                    <buttonAttemts picture_src=""></buttonAttemts>
-                    <buttonAttemts></buttonAttemts>
-                    <buttonAttemts></buttonAttemts>
-                    <buttonAttemts></buttonAttemts>
+                    <buttonAttemtsAd
+                        v-for="item in attempts" :key="item.index"
+                            :name_worker= "item.name"
+                            :time="item.time"
+                            :name_test="item.description"
+                            @click="$router.push(`/attempt/${item.index}`)">
+                    </buttonAttemtsAd>
                 </scrollBox>
             </glassBlock>
     </div>

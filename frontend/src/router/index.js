@@ -173,7 +173,7 @@ const routes = [
         }
     },
     {
-        path:'/bind',
+        path:'/bind/:bindId',
         component: bindPage,
         meta:{
             title: 'Заявка'

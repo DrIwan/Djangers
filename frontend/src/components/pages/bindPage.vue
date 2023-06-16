@@ -7,11 +7,11 @@
             <div class="info-block">
                 <div class="main-block">
                     <h2>ФИО</h2>
-                    <p>{{name}}</p>
+                    <p>{{workers[$route.params.bindId - 1].name}}</p>
                     <h2>Возраст</h2>
-                    <p>{{age}}</p>
+                    <p>{{workers[$route.params.bindId - 1].age}}</p>
                     <h2>Пол</h2>
-                    <p>{{gender}}</p>
+                    <p>{{workers[$route.params.bindId - 1].gender}}</p>
                     <div class="btn-grp">
                         <button class="btn-bind" @click="this.$router.push('/workers')">Одобрить</button>
                         <button class="btn-bind refusal" @click="this.$router.push('/workers')">Отклонить</button>
@@ -19,23 +19,51 @@
                 </div>
                 <div class="add-block">
                     <h2>Почта</h2>
-                    <p>{{mail}}</p>
+                    <p>{{workers[$route.params.bindId - 1].mail}}</p>
                 </div>
             </div>
         </glassBlock>
     </div>
 </template>
 <script>
+
 export default{
 
     data(){
         return{
             LBisOpen: false,
-            name:'Панин Максим Петрович',
-            age:'44',
-            gender:'Мужской',
-            mail:'paninMP@targetIT.ru'
+            workers :[
+                {index: 1, name: "Имя Как Имя",age: 35, gender: "male", mail:"susdsck@mail.ru"},
+                {index: 2, name: "Именуемый Как Имя",age: 23, gender: "male", mail:"heendel@mail.ru"},
+                {index: 3, name: "Имя Не Имя",age: 55, gender: "female", mail:"hooops@mail.ru"},
+                {index: 4, name: "Имя Да Имя",age: 12, gender: "male", mail:"noback@mail.ru"},
+                {index: 5, name: "Имя Да Выме",age: 21, gender: "female", mail:"onlyf@mail.ru"},
+                {index: 6, name: "Имя Да Да",age: 45, gender: "male", mail:"frees@mail.ru"},
+            ],
         }
+    },
+
+    props:{
+            name:
+            {
+                type: String,
+                default:'Панин Максим Петрович'
+            },
+            age:
+            {
+                type: Number,
+                default: 44,
+            },
+            gender:
+            {
+                type: String,
+                default:'Мужской',
+            },
+            mail:
+            {
+                type: String,
+                default: 'paninMP@targetIT.ru',
+            },
     },
     methods:{
         toggleOpen(inf){
