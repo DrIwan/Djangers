@@ -12,7 +12,7 @@
                             :name_test="item.description"
                             @click="$router.push(`/attempt/${item.index}`)">
                         </buttonAttemtsAd>
-                        <pagination>dsadsa</pagination>
+                        <pagination></pagination>
                 </scrollBox>
                 <div class="line"></div>
                 <ul class="tabs">

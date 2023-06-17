@@ -22,6 +22,9 @@ import subtestPage from "@/components/pages/subtestPage"
 import CardUserPage from "@/components/pages/CardUserPage"
 import updateCardUserPage from "@/components/pages/updateCardUserPage"
 import bindPage from "@/components/pages/bindPage"
+import createTestMainSetPage from "@/components/pages/createTestMainSetPage"
+import checkSubtestPage from "@/components/pages/checkSubtestPage"
+import createSubtestMainSetPage from "@/components/pages/createSubtestMainSetPage"
 
 const routes = [
     {
@@ -159,7 +162,7 @@ const routes = [
         }
     },
     {
-        path:'/cardUser',
+        path:'/cardUser/:cardUserId',
         component: CardUserPage,
         meta:{
             title: 'Карточка пользователя'
@@ -179,6 +182,28 @@ const routes = [
             title: 'Заявка'
         }
     },
+    {
+        path: '/mainSetTest',
+        component: createTestMainSetPage,
+        meta:{
+            title:'Главные настройки теста'
+        }
+    },
+    {
+        path: '/checkSubtest',
+        component: checkSubtestPage,
+        meta:{
+            title:'Выбор субтестов'
+        }
+    },
+    {
+        path: '/mainSetSubtest',
+        component: createSubtestMainSetPage,
+        meta:{
+            title:'Главные настройки субтеста'
+        }
+    },
+
 ]
 
 const router = createRouter({

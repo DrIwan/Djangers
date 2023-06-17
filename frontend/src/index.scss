@@ -153,4 +153,13 @@ body{
 .def-img{
     @apply bg-[url('./img/defaultImg.png')] bg-cover bg-center;
 }
+.br-p-test{
+    @apply flex flex-row justify-start items-center mb-7 font-monst font-medium text-xl text-pas-tabs;
+    p{
+        @apply ml-3 first:ml-0;
+        &:hover{
+            @apply text-sm-blue;
+        }
+    }
+}
 

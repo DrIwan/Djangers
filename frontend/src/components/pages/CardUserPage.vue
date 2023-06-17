@@ -1,5 +1,5 @@
 <template>
-    <leftMenuBar  numActive="0" @toggleClass="toggleOpen($event)"></leftMenuBar>
+    <leftMenuBar  numActive="3" @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
         <headerPg numActive="0"></headerPg>
         <h2 class="name-page">Карточка Пользователя</h2>
@@ -15,11 +15,11 @@
                             class="material-symbols-rounded">school</span>
                         </div>
                         <h2>ФИО</h2>
-                        <div>{{name}}</div>
+                        <div>{{workers[$route.params.cardUserId-1].name}}</div>
                         <h2>Возраст</h2>
-                        <div>{{age}}</div>
+                        <div>{{workers[$route.params.cardUserId-1].age}}</div>
                         <h2>Пол</h2>
-                        <div>{{gender}}</div>
+                        <div>{{workers[$route.params.cardUserId-1].gender}}</div>
                     </div>
                     <button class="edit-btn" @click="this.$router.push('/updateCardUser')"><span class="material-symbols-rounded">edit</span>Изменить</button>
                 </div>
@@ -59,6 +59,14 @@ export default{
             name:'Панин Максим Петрович',
             age:'44',
             gender:'Мужской',
+            workers :[
+            {index: 1, name: "Имя Как Имя",age: 35, gender: "Мужской", mail:"susdsck@mail.ru"},
+                {index: 2, name: "Именуемый Как Имя",age: 23, gender: "Мужской", mail:"heendel@mail.ru"},
+                {index: 3, name: "Имя Не Имя",age: 55, gender: "Женский", mail:"hooops@mail.ru"},
+                {index: 4, name: "Имя Да Имя",age: 12, gender: "Мужской", mail:"noback@mail.ru"},
+                {index: 5, name: "Имя Да Выме",age: 21, gender: "Женский", mail:"onlyf@mail.ru"},
+                {index: 6, name: "Имя Да Да",age: 45, gender: "Мужской", mail:"frees@mail.ru"},
+            ],
         }
     },
     methods:{
@@ -102,7 +110,7 @@ export default{
                     @apply mr-1;
                 }
                 &:hover{
-                    @apply transition-all duration-200 ease-in-out shadow-[inset_-4.2em_0_0_0,inset_4.2em_0_0_0] shadow-dark-blue text-white;
+                    @apply transition-all duration-200 ease-in-out shadow-[inset_-4.7em_0_0_0,inset_4.7em_0_0_0] shadow-dark-blue text-white;
 
                 }
             }

@@ -5,25 +5,34 @@
             <h2 class="name-page">Работники</h2>
             <glassBlock class="admin-menu" style="height: 70vh!important;">
                 <scrollBox v-if="tabs==0" class="scrl" left>
+                    <div  v-for="item in workers" :key="item.index">
                         <buttonWorker
-                            v-for="item in workers" :key="item.index"
+                            isUser
+                            v-if="!item.status && item.isUser"
                             :worker= "item.name"
-                            @click="$router.push(`/bind/${item.index}`)">
+                            @click="$router.push(`/cardUser/${item.index}`)">
                         </buttonWorker>
+                    </div>
                 </scrollBox>
                 <scrollBox v-if="tabs==1" class="scrl" left>
+                    <div  v-for="item in workers" :key="item.index">
                         <buttonWorker
-                            v-for="item in workers" :key="item.index"
+                            isUser
+                            v-if="item.status && item.isUser"
                             :worker= "item.name"
-                            @click="$router.push(`/bind/${item.index}`)">
+                            @click="$router.push(`/cardUser/${item.index}`)">
                         </buttonWorker>
+                    </div>
                 </scrollBox>
                 <scrollBox v-if="tabs==2" class="scrl" left>
+                    <div  v-for="item in workers" :key="item.index">
                         <buttonWorker
-                            v-for="item in workers" :key="item.index"
+                            isUser
+                            v-if="!item.isUser"
                             :worker= "item.name"
                             @click="$router.push(`/bind/${item.index}`)">
                         </buttonWorker>
+                    </div>
                 </scrollBox>
                 <div class="line"></div>
                 <ul class="tabs">
@@ -43,12 +52,12 @@ export default{
             LBisOpen: false,
             tabs:0,
             workers :[
-                {index: 1, name: "Имя Как Имя",age: 35, gender: "male", mail:"susdsck@mail.ru"},
-                {index: 2, name: "Именуемый Как Имя",age: 23, gender: "male", mail:"heendel@mail.ru"},
-                {index: 3, name: "Имя Не Имя",age: 55, gender: "female", mail:"hooops@mail.ru"},
-                {index: 4, name: "Имя Да Имя",age: 12, gender: "male", mail:"noback@mail.ru"},
-                {index: 5, name: "Имя Да Выме",age: 21, gender: "female", mail:"onlyf@mail.ru"},
-                {index: 6, name: "Имя Да Да",age: 45, gender: "male", mail:"frees@mail.ru"},
+                {index: 1, name: "Имя Как Имя",age: 35, gender: "Мужской", mail:"susdsck@mail.ru",status:true,isUser:true},
+                {index: 2, name: "Именуемый Как Имя",age: 23, gender: "Мужской", mail:"heendel@mail.ru",status:true,isUser:true},
+                {index: 3, name: "Имя Не Имя",age: 55, gender: "Женский", mail:"hooops@mail.ru",status:true,isUser:true},
+                {index: 4, name: "Имя Да Имя",age: 12, gender: "Мужской", mail:"noback@mail.ru",status:false,isUser:false},
+                {index: 5, name: "Имя Да Выме",age: 21, gender: "Женский", mail:"onlyf@mail.ru",status:false,isUser:true},
+                {index: 6, name: "Имя Да Да",age: 45, gender: "Мужской", mail:"frees@mail.ru",status:false,isUser:false},
             ],
         }
     },
