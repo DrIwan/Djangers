@@ -6,8 +6,8 @@
                 <h2 class="header-page">Тесты</h2>
                     <!--проверка статуса-->
                 <div v-if="true" class="express-btn">
-                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">add</span>
-                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">refresh</span>
+                    <span v-on:click="this.$router.push('/mainSetTest')" class="material-symbols-rounded">add</span>
+                    <span v-on:click="this.$router.push('/mainSetTest')" class="material-symbols-rounded">refresh</span>
                     <span v-on:click="this.$refs.delWind.toogleOpen()" class="material-symbols-rounded">delete</span>
                     <!--проверка фильтр на скрытые/др. вкладка-->
                     <span

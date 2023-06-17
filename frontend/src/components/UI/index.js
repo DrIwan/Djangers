@@ -15,6 +15,9 @@ import buttonAttemtsAd from "@/components/UI/buttonAttemtsAd"
 import buttonWorker from "@/components/UI/buttonWorker"
 import imageChange from "@/components/UI/imageChange"
 import modalWind from "@/components/UI/modalWind"
+import checkBox from "@/components/UI/checkBox"
+import docomboBox from "@/components/UI/docomboBox"
+import buttonCheckTest from "@/components/UI/buttonCheckTest"
 
 export default[
     buttonRg,
@@ -33,5 +36,8 @@ export default[
     buttonAttemtsAd,
     buttonWorker,
     imageChange,
-    modalWind
+    modalWind,
+    checkBox,
+    docomboBox,
+    buttonCheckTest
 ]

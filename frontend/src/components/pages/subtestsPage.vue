@@ -6,8 +6,8 @@
             <h2 class="name-page" style="margin: 0;">Субтесты</h2>
 
             <div v-if="true" class="express-btn">
-                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">add</span>
-                    <span v-on:click="this.$router.push('/')" class="material-symbols-rounded">refresh</span>
+                    <span v-on:click="this.$router.push('/mainSetSubtest')" class="material-symbols-rounded">add</span>
+                    <span v-on:click="this.$router.push('/mainSetSubtest')" class="material-symbols-rounded">refresh</span>
                     <span v-on:click="this.$refs.delWind.toogleOpen()" class="material-symbols-rounded">delete</span>
                 </div>
          </div>
