@@ -42,8 +42,8 @@
 
                 <!--пейджер добавить-->
             </glassBlock>
-            <modalWind ref="delWind" title="Предупреждение" text="Вы уверены, что хотите удалить? После удаления субтест не возобновить."></modalWind>
     </div>
+    <modalWind ref="delWind" title="Предупреждение" text="Вы уверены, что хотите удалить? После удаления субтест не возобновить."></modalWind>
 </template>
 <script>
 export default{

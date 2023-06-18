@@ -156,7 +156,7 @@ body{
 .br-p-test{
     @apply flex flex-row justify-start items-center mb-7 font-monst font-medium text-xl text-pas-tabs;
     p{
-        @apply ml-3 first:ml-0;
+        @apply ml-3 first:ml-0 cursor-pointer;
         &:hover{
             @apply text-sm-blue;
         }
