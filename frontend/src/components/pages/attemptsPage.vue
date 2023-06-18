@@ -29,7 +29,7 @@
                         v-for="item in attempts" :key="item.index"
                             :name_worker= "item.name"
                             :time="item.time"
-                            :name_test="item.description"
+                            :name_test="item.test"
                             @click="$router.push(`/attempt/${item.index}`)">
                     </buttonAttemtsAd>
                 </scrollBox>
@@ -44,7 +44,10 @@ export default{
     data(){
         return{
             LBisOpen: false,
-            attempts :[{index: 1, name: 222,time: '01.04.2023 18:34:26', description: 333}, {index: 2, name: 322, time: '01.06.2023 18:34:26', description: 433}]
+            attempts :[
+                    {index: 1, name: 'Панин Максим Петрович',time: '01.04.2023 18:34:26', test: 'Диагностика темперамента по Айзенку'},
+                    {index: 2, name: 'Беликова Анна Матвеевна', time: '01.06.2023 18:34:26', test: 'Тест эмоционального интеллекта Холла'}
+                ]
         }
     },
     methods:{
