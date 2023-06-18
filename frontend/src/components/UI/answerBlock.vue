@@ -4,13 +4,8 @@
             <div class="btn-scales">
                 <expBtnBlock
                     icon="scale"
-                    @click="showModal = true"
+                    @click="toggleModal"
                  ></expBtnBlock>
-                 <modalWind
-                    v-if="showModal"
-                    :isOpen="showModal"
-                    @toggleOpenPrnt="toggleModal($event)"
-                 ></modalWind>
             </div>
             <checkBox class="ch"></checkBox>
     </glassBlock>
@@ -30,8 +25,9 @@
             }
         },
         methods:{
-            toggleModal(op){
-                this.showModal = op;
+            toggleModal(){
+                this.showModal = true;
+                this.$emit('toggleModal', this.showModal);
             },
         }
     }

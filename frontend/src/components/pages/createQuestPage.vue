@@ -12,6 +12,7 @@
             <blockQuest
                 v-for="qst in questions" :key="qst.num"
                 :ind ="qst.num"
+                @toggleModal="sMsl($event)"
             ></blockQuest>
             <addQuest
                 @click="additem"
@@ -21,7 +22,14 @@
             </div>
        </form>
     </div>
-    <modalWind ref="scalesWind" title="Шкалы" text="">
+    <modalWind
+         ref="scalesWind"
+         title="Шкалы"
+         text=""
+         v-if="showModal"
+        :isOpen="showModal"
+        @toggleOpenPrnt="sMsl($event)"
+         >
         <div class="h-[50vh] mb-3">
             <scrollBox>
                 <buttonCheckTest></buttonCheckTest>
@@ -43,9 +51,12 @@ export default{
             this.LBisOpen = inf;
         },
         additem(){
-                this.newItem.num = JSON.parse(JSON.stringify(this.index++));
-                this.questions.push(this.newItem);
-            },
+            this.newItem.num = JSON.parse(JSON.stringify(this.index++));
+            this.questions.push(this.newItem);
+        },
+        sMsl(sh){
+            this.showModal = sh;
+        },
     },
     data() {
         return {
@@ -54,6 +65,7 @@ export default{
             ],
             index: 1,
             newItem: {num: 0},
+            showModal: false,
         };
     }
 }

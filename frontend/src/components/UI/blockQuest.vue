@@ -13,6 +13,7 @@
                         <answerBlock
                             v-for="item in answers" :key="item.num"
                             :num="item.num"
+                            @toggleModal="sMsl($event)"
                         ></answerBlock>
                         <addQuest
                             @click="additem"
@@ -36,6 +37,7 @@ export default{
                 newItem: {num: 0},
                 answers: [{num:1,}],
                 index: 1,
+                showModal: false,
             }
         },
         methods:{
@@ -43,6 +45,11 @@ export default{
                 this.newItem.num = JSON.parse(JSON.stringify(this.index++));
                 this.answers.push(this.newItem);
             },
+            sMsl(sh){
+                this.showModal = sh;
+                this.$emit('toggleModal', this.showModal);
+            },
+
         },
     }
 </script>
