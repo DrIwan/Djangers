@@ -29,6 +29,7 @@ import createQuestPage from "@/components/pages/createQuestPage"
 import createQuestSubPage from "@/components/pages/createQuestSubPage"
 import endCreateTest from "@/components/pages/endCreateTest"
 import endCreateSubT from "@/components/pages/endCreateSubT"
+import testPage from "@/components/pages/testPage"
 
 const routes = [
     {
@@ -158,6 +159,14 @@ const routes = [
             title: 'Превью теста'
         }
     },
+    {
+        path:'/testU/:testId',
+        component: testPage,
+        meta:{
+            title: 'Прохождение теста'
+        }
+    },
+
     {
         path:'/subtest/:subtestId',
         component: subtestPage,

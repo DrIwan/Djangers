@@ -22,6 +22,8 @@ import blockQuest from "@/components/UI/blockQuest"
 import expBtnBlock from "@/components/UI/expBtnBlock"
 import addQuest from "@/components/UI/addQuest"
 import answerBlock from "@/components/UI/answerBlock"
+import numberQuestTest from "@/components/UI/numberQuestTest"
+import blockAnsTest from "@/components/UI/blockAnsTest"
 
 export default[
     buttonRg,
@@ -47,5 +49,7 @@ export default[
     blockQuest,
     expBtnBlock,
     addQuest,
-    answerBlock
+    answerBlock,
+    numberQuestTest,
+    blockAnsTest
 ]
