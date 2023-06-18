@@ -3,6 +3,9 @@
         <div class="modal-box">
             <h2>{{ title }}</h2>
             <p>{{text }}</p>
+            <slot>
+
+            </slot>
             <div class="btn-gr">
                 <buttonRg v-on:click="toogleOpen">ОК</buttonRg>
                 <buttonRg v-on:click="toogleOpen">ОТМЕНА</buttonRg>
@@ -45,7 +48,7 @@
     .modal-box{
         @apply w-1/2 h-auto bg-white rounded-2xl p-10 font-monst;
         h2{
-            @apply font-black text-5xl text-dark-blue mb-7;
+            @apply font-black text-center text-5xl text-dark-blue mb-7;
         }
         p{
             @apply text-xl mb-7;

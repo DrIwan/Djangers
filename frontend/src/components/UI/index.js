@@ -18,6 +18,10 @@ import modalWind from "@/components/UI/modalWind"
 import checkBox from "@/components/UI/checkBox"
 import docomboBox from "@/components/UI/docomboBox"
 import buttonCheckTest from "@/components/UI/buttonCheckTest"
+import blockQuest from "@/components/UI/blockQuest"
+import expBtnBlock from "@/components/UI/expBtnBlock"
+import addQuest from "@/components/UI/addQuest"
+import answerBlock from "@/components/UI/answerBlock"
 
 export default[
     buttonRg,
@@ -39,5 +43,9 @@ export default[
     modalWind,
     checkBox,
     docomboBox,
-    buttonCheckTest
+    buttonCheckTest,
+    blockQuest,
+    expBtnBlock,
+    addQuest,
+    answerBlock
 ]

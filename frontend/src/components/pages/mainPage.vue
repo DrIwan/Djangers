@@ -1,6 +1,7 @@
 <template>
 
         <leftMenuBar
+            numActive="0"
             @toggleClass="toggleOpen($event)"
 
         ></leftMenuBar>
@@ -9,7 +10,7 @@
             :class="LBisOpen? 'container': 'container big-container'"
         >
 
-            <headerPg></headerPg>
+            <headerPg numActive="-1"></headerPg>
             <div class="parting-block">
                 <div class="text-block">
                     <h2>Добро пожаловать на Тест+</h2>

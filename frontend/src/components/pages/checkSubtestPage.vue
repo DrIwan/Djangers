@@ -7,22 +7,24 @@
            <p>Основные характеристики</p>
            <p>Субтесты</p>
        </div>
-       <glassBlock class="gb" style="height: 85vh!important;">
+       <glassBlock class="gb" style="height: auto!important;">
            <form class="main-set">
                     <!--пейджер-->
-                    <scrollBox class="scrl" left style="height: 90%!important;">
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                        <buttonCheckTest></buttonCheckTest>
-                    </scrollBox>
-                    <div class="flex flex-row justify-center mt-5">
-                        <buttonRg class="btn-next" v-on:click="this.$router.push('/')">ОК</buttonRg>
+                    <div class="h-[80vh]">
+                        <scrollBox class="scrl" left style="height: 90%!important;">
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                            <buttonCheckTest></buttonCheckTest>
+                        </scrollBox>
+                    </div>
+                    <div class="flex flex-row justify-center mt-3">
+                        <buttonRg class="btn-next" v-on:click="this.$router.push('/createQuest')">ОК</buttonRg>
                     </div>
            </form>
 

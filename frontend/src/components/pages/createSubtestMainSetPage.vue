@@ -20,7 +20,7 @@
                    <h2 class="mb-4">Перемещать</h2>
                    <docomboBox class="cmb"></docomboBox>
                    <div class="flex flex-row justify-center">
-                       <buttonRg class="btn-next" v-on:click="this.$router.push('/')">ОК</buttonRg>
+                       <buttonRg class="btn-next" v-on:click="this.$router.push('/createQuestSub')">ОК</buttonRg>
                    </div>
                </div>
            </form>
@@ -32,9 +32,6 @@ export default{
    methods: {
        toggleOpen(inf) {
            this.LBisOpen = inf;
-       },
-       opChCl(ind){
-           this.opCh = ind;
        }
    },
 }

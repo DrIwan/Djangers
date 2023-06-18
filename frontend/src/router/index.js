@@ -25,6 +25,10 @@ import bindPage from "@/components/pages/bindPage"
 import createTestMainSetPage from "@/components/pages/createTestMainSetPage"
 import checkSubtestPage from "@/components/pages/checkSubtestPage"
 import createSubtestMainSetPage from "@/components/pages/createSubtestMainSetPage"
+import createQuestPage from "@/components/pages/createQuestPage"
+import createQuestSubPage from "@/components/pages/createQuestSubPage"
+import endCreateTest from "@/components/pages/endCreateTest"
+import endCreateSubT from "@/components/pages/endCreateSubT"
 
 const routes = [
     {
@@ -203,6 +207,34 @@ const routes = [
             title:'Главные настройки субтеста'
         }
     },
+    {
+        path: '/createQuest',
+        component: createQuestPage,
+        meta:{
+            title:'Добавление вопросов'
+        }
+    },
+    {
+        path: '/createQuestSub',
+        component: createQuestSubPage,
+        meta:{
+            title:'Добавление вопросов'
+        }
+    },
+    {
+        path: '/endCreateTest',
+        component:endCreateTest,
+        meta:{
+            title:'Результаты'
+        }
+    },
+    {
+        path: '/endCreateSubT',
+        component:endCreateSubT,
+        meta:{
+            title:'Результаты'
+        }
+    }
 
 ]
 

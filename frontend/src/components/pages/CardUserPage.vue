@@ -1,4 +1,5 @@
 <template>
+
     <leftMenuBar  numActive="3" @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
         <headerPg numActive="0"></headerPg>
@@ -9,11 +10,7 @@
                 <imageChange></imageChange>
                 <div class="info-block">
                     <div class="text">
-                        <div class="ctrl-box">
-                            <span
-                            v-on:click="this.$refs.upWind.toogleOpen()"
-                            class="material-symbols-rounded">school</span>
-                        </div>
+                        <expBtnBlock icon="school" v-on:click="this.$refs.upWind.toogleOpen()"></expBtnBlock>
                         <h2>ФИО</h2>
                         <div>{{workers[$route.params.cardUserId-1].name}}</div>
                         <h2>Возраст</h2>
@@ -51,33 +48,31 @@
 
 <script>
 export default{
-
-    data(){
-        return{
+    data() {
+        return {
             LBisOpen: false,
-            tabs:0,
-            name:'Панин Максим Петрович',
-            age:'44',
-            gender:'Мужской',
-            workers :[
-            {index: 1, name: "Имя Как Имя",age: 35, gender: "Мужской", mail:"susdsck@mail.ru"},
-                {index: 2, name: "Именуемый Как Имя",age: 23, gender: "Мужской", mail:"heendel@mail.ru"},
-                {index: 3, name: "Имя Не Имя",age: 55, gender: "Женский", mail:"hooops@mail.ru"},
-                {index: 4, name: "Имя Да Имя",age: 12, gender: "Мужской", mail:"noback@mail.ru"},
-                {index: 5, name: "Имя Да Выме",age: 21, gender: "Женский", mail:"onlyf@mail.ru"},
-                {index: 6, name: "Имя Да Да",age: 45, gender: "Мужской", mail:"frees@mail.ru"},
+            tabs: 0,
+            name: "Панин Максим Петрович",
+            age: "44",
+            gender: "Мужской",
+            workers: [
+                { index: 1, name: "Имя Как Имя", age: 35, gender: "Мужской", mail: "susdsck@mail.ru" },
+                { index: 2, name: "Именуемый Как Имя", age: 23, gender: "Мужской", mail: "heendel@mail.ru" },
+                { index: 3, name: "Имя Не Имя", age: 55, gender: "Женский", mail: "hooops@mail.ru" },
+                { index: 4, name: "Имя Да Имя", age: 12, gender: "Мужской", mail: "noback@mail.ru" },
+                { index: 5, name: "Имя Да Выме", age: 21, gender: "Женский", mail: "onlyf@mail.ru" },
+                { index: 6, name: "Имя Да Да", age: 45, gender: "Мужской", mail: "frees@mail.ru" },
             ],
-        }
+        };
     },
-    methods:{
-        toggleOpen(inf){
+    methods: {
+        toggleOpen(inf) {
             this.LBisOpen = inf;
         },
-        toggleTabs(num){
+        toggleTabs(num) {
             this.tabs = num;
         }
-
-    },
+    }
 }
 </script>
 <style lang="scss" scoped>
