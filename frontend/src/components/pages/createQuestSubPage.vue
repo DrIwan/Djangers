@@ -9,14 +9,26 @@
            <p>Вопросы</p>
        </div>
        <form>
-            <blockQuest></blockQuest>
-            <addQuest></addQuest>
+            <blockQuest
+                v-for="qst in questions" :key="qst.num"
+                :ind ="qst.num"
+                 @toggleModal="sMsl($event)"
+            ></blockQuest>
+            <addQuest
+            @click="additem"
+            ></addQuest>
             <div class="flex flex-row justify-center">
                 <buttonRg class="btn" style="width: 40%!important;" v-on:click="this.$router.push('/endCreateSubT')">Завершить добавление</buttonRg>
             </div>
        </form>
     </div>
-    <modalWind ref="scalesWind" title="Шкалы" text="">
+    <modalWind
+        v-if="showModal"
+        :isOpen="showModal"
+        @toggleOpenPrnt="sMsl($event)"
+        ref="scalesWind"
+        title="Шкалы"
+        text="">
         <div class="h-[50vh] mb-3">
             <scrollBox>
                 <buttonCheckTest></buttonCheckTest>
@@ -36,13 +48,23 @@ export default{
     methods: {
         toggleOpen(inf) {
             this.LBisOpen = inf;
-        }
+        },
+        additem(){
+            this.newItem.num = JSON.parse(JSON.stringify(this.index++));
+            this.questions.push(this.newItem);
+        },
+        sMsl(sh){
+            this.showModal = sh;
+        },
     },
     data() {
         return {
             questions: [
                 { num: 1, },
             ],
+            index: 1,
+            newItem: {num: 0},
+            showModal: false,
         };
     }
 }
