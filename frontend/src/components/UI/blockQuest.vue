@@ -10,8 +10,13 @@
                 <textBox style="width: 80%!important;"></textBox>
                 <div class="cont-set">
                     <div class="set-ans">
-                        <answerBlock></answerBlock>
-                        <addQuest></addQuest>
+                        <answerBlock
+                            v-for="item in answers" :key="item.num"
+                            :num="item.num"
+                        ></answerBlock>
+                        <addQuest
+                            @click="additem"
+                        ></addQuest>
                     </div>
                     <div class="add-set">
                         <checkBox title="Множество"></checkBox>
@@ -25,12 +30,20 @@
 <script>
 export default{
         name: 'blockQuest',
-        props:{
-            'num':{
-                type: String,
-                default: '1'
+        props:['ind'],
+        data(){
+            return{
+                newItem: {num: 0},
+                answers: [{num:1,}],
+                index: 1,
             }
-        }
+        },
+        methods:{
+            additem(){
+                this.newItem.num = JSON.parse(JSON.stringify(this.index++));
+                this.answers.push(this.newItem);
+            },
+        },
     }
 </script>
 <style lang="scss" scoped>

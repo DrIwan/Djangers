@@ -2,7 +2,15 @@
     <glassBlock style="height: auto!important; padding: 0.8rem!important;" class="gb">
             <textBox style="margin: 0!important; width: 70%!important;"></textBox>
             <div class="btn-scales">
-                <expBtnBlock icon="scale"></expBtnBlock>
+                <expBtnBlock
+                    icon="scale"
+                    @click="showModal = true"
+                 ></expBtnBlock>
+                 <modalWind
+                    v-if="showModal"
+                    :isOpen="showModal"
+                    @toggleOpenPrnt="toggleModal($event)"
+                 ></modalWind>
             </div>
             <checkBox class="ch"></checkBox>
     </glassBlock>
@@ -10,6 +18,22 @@
 <script>
  export default{
         name: 'answerBlock',
+        props: {
+            'num': {
+                type: Number,
+                default: 1,
+            }
+        },
+        data(){
+            return{
+                showModal: false,
+            }
+        },
+        methods:{
+            toggleModal(op){
+                this.showModal = op;
+            },
+        }
     }
 </script>
 <style lang="scss" scoped>

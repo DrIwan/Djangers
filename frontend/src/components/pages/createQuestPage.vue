@@ -9,8 +9,13 @@
            <p>Вопросы</p>
        </div>
        <form>
-            <blockQuest></blockQuest>
-            <addQuest></addQuest>
+            <blockQuest
+                v-for="qst in questions" :key="qst.num"
+                :ind ="qst.num"
+            ></blockQuest>
+            <addQuest
+                @click="additem"
+            ></addQuest>
             <div class="flex flex-row justify-center">
                 <buttonRg class="btn" style="width: 40%!important;" v-on:click="this.$router.push('/endCreateTest')">Завершить добавление</buttonRg>
             </div>
@@ -36,13 +41,19 @@ export default{
     methods: {
         toggleOpen(inf) {
             this.LBisOpen = inf;
-        }
+        },
+        additem(){
+                this.newItem.num = JSON.parse(JSON.stringify(this.index++));
+                this.questions.push(this.newItem);
+            },
     },
     data() {
         return {
             questions: [
                 { num: 1, },
             ],
+            index: 1,
+            newItem: {num: 0},
         };
     }
 }

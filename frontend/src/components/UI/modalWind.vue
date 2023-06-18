@@ -1,5 +1,5 @@
 <template>
-    <section :class="isOpen?'shadow-box':'hidden'">
+    <section :class="opn?'shadow-box':'hidden'">
         <div class="modal-box">
             <h2>{{ title }}</h2>
             <p>{{text }}</p>
@@ -16,13 +16,9 @@
 <script>
     export default{
         name:'modalWind',
-        isOpen:{
-            type: Boolean,
-            value: true,
-        },
         data(){
             return{
-                isOpen: false
+                opn: this.isOpen,
             }
         },
         props: {
@@ -34,11 +30,17 @@
                 type: String,
                 default: 'Вы уверены, что хотите опубликовать тест?'
             },
+            'isOpen':{
+                type: Boolean,
+                default: false,
+            }
         },
+
         methods:{
             toogleOpen(){
-                this.isOpen = !this.isOpen;
-            }
+                this.opn = !this.opn;
+                this.$emit('toggleOpenPrnt', this.opn);
+            },
         }
     }
 </script>
