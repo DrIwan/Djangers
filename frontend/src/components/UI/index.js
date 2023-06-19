@@ -25,6 +25,8 @@ import answerBlock from "@/components/UI/answerBlock"
 import numberQuestTest from "@/components/UI/numberQuestTest"
 import blockAnsTest from "@/components/UI/blockAnsTest"
 import blockImgAnsw from "@/components/UI/blockImgAnsw"
+import timerTest from "@/components/UI/timerTest"
+import answBlockEnt from "@/components/UI/answBlockEnt"
 
 export default[
     buttonRg,
@@ -53,5 +55,7 @@ export default[
     answerBlock,
     numberQuestTest,
     blockAnsTest,
-    blockImgAnsw
+    blockImgAnsw,
+    timerTest,
+    answBlockEnt
 ]

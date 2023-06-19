@@ -30,6 +30,8 @@ import createQuestSubPage from "@/components/pages/createQuestSubPage"
 import endCreateTest from "@/components/pages/endCreateTest"
 import endCreateSubT from "@/components/pages/endCreateSubT"
 import testPage from "@/components/pages/testPage"
+import endTest from "@/components/pages/endTest"
+import resultsPage from "@/components/pages/resultsPage"
 
 const routes = [
     {
@@ -242,6 +244,20 @@ const routes = [
         component:endCreateSubT,
         meta:{
             title:'Результаты'
+        }
+    },
+    {
+        path:'/endTest',
+        component:endTest,
+        meta:{
+            title:'Отправка ответов'
+        }
+    },
+    {
+        path:'/results',
+        component:resultsPage,
+        meta:{
+            title:'Результат'
         }
     }
 

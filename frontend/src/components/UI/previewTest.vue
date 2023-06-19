@@ -6,13 +6,14 @@
             <!--запрос номера последней попытки-->
             <p class="attempt">Попытка: {{ attempts }}</p>
             <button
-                v-if="true"
+                v-if="!isFail"
                 class="start-btn"
                 @click="this.$router.push(`/testU/${$route.params.testId}`)"
             >Пройти тест</button>
             <button
-                v-if="false"
+                v-if="isFail"
                 class="start-btn"
+                @click="this.$router.push(`/main`)"
             >На главную</button>
         </div>
         <!--В зависимости от статуса теста менять изображение-->
@@ -40,6 +41,10 @@
             'testIndex':{
                 type: Number,
                 default:0,
+            },
+            'isFail':{
+                type: Boolean,
+                default:false,
             }
         },
 
