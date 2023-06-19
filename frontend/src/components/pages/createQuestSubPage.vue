@@ -31,14 +31,14 @@
         text="">
         <div class="h-[50vh] mb-3">
             <scrollBox>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
-                <buttonCheckTest></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
+                <buttonCheckTest nameSubtest="Шкала"></buttonCheckTest>
             </scrollBox>
         </div>
     </modalWind>
