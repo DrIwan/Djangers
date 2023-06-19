@@ -24,6 +24,7 @@ import addQuest from "@/components/UI/addQuest"
 import answerBlock from "@/components/UI/answerBlock"
 import numberQuestTest from "@/components/UI/numberQuestTest"
 import blockAnsTest from "@/components/UI/blockAnsTest"
+import blockImgAnsw from "@/components/UI/blockImgAnsw"
 
 export default[
     buttonRg,
@@ -51,5 +52,6 @@ export default[
     addQuest,
     answerBlock,
     numberQuestTest,
-    blockAnsTest
+    blockAnsTest,
+    blockImgAnsw
 ]

@@ -7,10 +7,15 @@
                 <!--ДОБАВИТЬ ТАЙМЕР-->
                 <glassBlock style="height: auto!important; width: auto!important; padding: 0.5rem;" class="gb-time">{{stringTime()}}</glassBlock>
            </div>
-            <numberQuestTest :num=58></numberQuestTest>
-            <blockAnsTest total=58></blockAnsTest>
-            <blockAnsTest typeQuest num=2 total=58></blockAnsTest>
-            <blockAnsTest num=3 total=58></blockAnsTest>
+            <numberQuestTest :num=25></numberQuestTest>
+            <blockAnsTest total=58 clickT></blockAnsTest>
+            <blockAnsTest typeQuest num=2 total=58 clickT></blockAnsTest>
+            <blockAnsTest num=3 total=58 clickT typeAnsw typeQuest></blockAnsTest>
+            <blockAnsTest num=4 total=58></blockAnsTest>
+            <blockAnsTest num=5 total=58 clickT typeAnsw></blockAnsTest>
+            <div class="w-full flex flex-row justify-center mb-4">
+                <buttonRg v-on:click="this.$router.push('/tests')">Завершить</buttonRg>
+            </div>
    </div>
 </template>
 
