@@ -2,7 +2,9 @@
     <leftMenuBar numActive="1"  @toggleClass="toggleOpen($event)"></leftMenuBar>
     <div :class="LBisOpen? 'container': 'container big-container'">
         <headerPg numActive="1"></headerPg>
-        <previewTest></previewTest>
+        <previewTest
+
+        ></previewTest>
     </div>
 </template>
 <script>

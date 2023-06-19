@@ -84,6 +84,12 @@
 
 <script>
 export default{
+    props:{
+        'index':{
+            type: Number,
+            default: 0,
+        },
+    },
     data() {
         return {
             LBisOpen: false,

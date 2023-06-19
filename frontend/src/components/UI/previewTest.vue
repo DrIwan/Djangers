@@ -5,8 +5,15 @@
             <p class="subtext">{{subtext}}</p>
             <!--запрос номера последней попытки-->
             <p class="attempt">Попытка: {{ attempts }}</p>
-            <button  v-if="true" class="start-btn">Пройти тест</button>
-            <button  v-if="false" class="start-btn">На главную</button>
+            <button
+                v-if="true"
+                class="start-btn"
+                @click="this.$router.push(`/testU/${$route.params.testId}`)"
+            >Пройти тест</button>
+            <button
+                v-if="false"
+                class="start-btn"
+            >На главную</button>
         </div>
         <!--В зависимости от статуса теста менять изображение-->
         <div class="img-block open">
@@ -30,6 +37,10 @@
                 type: Number,
                 default: 1
             },
+            'testIndex':{
+                type: Number,
+                default:0,
+            }
         },
 
     }
